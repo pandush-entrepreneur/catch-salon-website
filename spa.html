@@ -468,6 +468,33 @@
     }
 
 
+    /* ─── DUAL SERVICE (side by side, no image) ─────────────── */
+    .dual-service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .dual-service-divider {
+      background: rgba(181,168,154,0.3);
+      align-self: stretch;
+    }
+    .dual-service-card h2 {
+      font-size: clamp(26px, 3.2vw, 40px);
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+    @media (max-width: 768px) {
+      .dual-service-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .dual-service-divider {
+        height: 1px;
+        width: 100%;
+      }
+    }
+
     /* ═══════════════════════════════════════════════════════════
        TESTIMONIAL CALLOUT
     ═══════════════════════════════════════════════════════════ */
@@ -942,7 +969,7 @@
   <div class="container">
     <div class="service-block-inner">
       <div class="service-image">
-        <img src="more recent photos/1000035362.jpeg"
+        <img src="more recent photos/Screenshot 2026-03-13 at 7.36.04 PM.png"
              alt="Cryotherapy facial at Catch Spa"
              loading="lazy" />
       </div>
@@ -956,30 +983,6 @@
           <span class="best-for-text">Puffiness &nbsp;·&nbsp; Redness &nbsp;·&nbsp; Pre-event &nbsp;·&nbsp; Collagen boost &nbsp;·&nbsp; Glow enhancement</span>
         </div>
         <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 7. LED THERAPY FACIAL -->
-<div class="service-block">
-  <div class="container">
-    <div class="service-block-inner">
-      <div class="service-meta">
-        <span class="service-pill">Light Therapy</span>
-        <h2>LED Therapy Facial</h2>
-        <span class="service-tagline">Light that heals. Skin that glows.</span>
-        <p class="service-body">LED light therapy delivers precise wavelengths of energy deep into the skin to stimulate collagen repair, smooth fine lines, and address multiple skin concerns simultaneously. Red light rebuilds and firms; blue light targets acne-causing bacteria for clearer, healthier skin. Non-invasive, completely comfortable, and deeply effective.</p>
-        <div class="best-for">
-          <span class="best-for-label">Best for</span>
-          <span class="best-for-text">Fine lines &nbsp;·&nbsp; Active acne &nbsp;·&nbsp; Post-treatment recovery &nbsp;·&nbsp; Overall skin health</span>
-        </div>
-        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
-      </div>
-      <div class="service-image">
-        <img src="more recent photos/67712e_9c411820b30348ce9119bd3325539916~mv2.jpeg"
-             alt="LED therapy facial at Catch Spa"
-             loading="lazy" />
       </div>
     </div>
   </div>
@@ -1009,16 +1012,23 @@
   </div>
 </div>
 
-<!-- 10. HAIR REMOVAL -->
+<!-- 10. LED THERAPY FACIAL + HAIR REMOVAL (side by side, no images) -->
 <div class="service-block">
   <div class="container">
-    <div class="service-block-inner">
-      <div class="service-image">
-        <img src="more recent photos/67712e_9054d493238f40afa5d5c2191d5c6a02~mv2.jpeg"
-             alt="Hair removal services at Catch Spa"
-             loading="lazy" />
+    <div class="dual-service-grid">
+      <div class="dual-service-card">
+        <span class="service-pill">Light Therapy</span>
+        <h2>LED Therapy Facial</h2>
+        <span class="service-tagline">Light that heals. Skin that glows.</span>
+        <p class="service-body">LED light therapy delivers precise wavelengths of energy deep into the skin to stimulate collagen repair, smooth fine lines, and address multiple skin concerns simultaneously. Red light rebuilds and firms; blue light targets acne-causing bacteria for clearer, healthier skin. Non-invasive, completely comfortable, and deeply effective.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Fine lines &nbsp;·&nbsp; Active acne &nbsp;·&nbsp; Post-treatment recovery &nbsp;·&nbsp; Overall skin health</span>
+        </div>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
       </div>
-      <div class="service-meta">
+      <div class="dual-service-divider"></div>
+      <div class="dual-service-card">
         <span class="service-pill">Hair Removal</span>
         <h2>Hair Removal</h2>
         <span class="service-tagline">Smooth, lasting, effortless.</span>
