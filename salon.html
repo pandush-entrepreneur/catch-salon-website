@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salon Services | Catch Salon &amp; Spa | Spring Hill, TN</title>
-  <meta name="description" content="Expert hair cuts, color, balayage, keratin treatments, and extensions in Spring Hill, TN. Book with Catch Salon &amp; Spa." />
+  <meta name="description" content="Expert haircuts, color, balayage, highlights & blowouts at Catch Salon & Spa in Spring Hill, TN. A luxury salon experience near Nashville. Book today." />
+  <link rel="icon" type="image/png" href="brand_assets/catch salo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -695,6 +696,47 @@
     @media (max-width: 480px) {
       .footer-top { grid-template-columns: 1fr; }
     }
+
+    /* ─── BOOKING MODAL ─────────────────────────────────────── */
+    .booking-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(20,18,16,0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .booking-overlay.open { display: flex; }
+    .booking-modal-box {
+      position: relative;
+      background: var(--white);
+      width: 100%;
+      max-width: 540px;
+      border-radius: 4px;
+      padding: 48px 44px 40px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .booking-modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none; border: none;
+      font-size: 22px; line-height: 1;
+      color: var(--taupe);
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .booking-modal-close:hover { color: var(--charcoal); }
+    .booking-modal-header { text-align: center; margin-bottom: 28px; }
+    @media (max-width: 600px) {
+      .booking-modal-box { padding: 40px 24px 28px; }
+    }
   </style>
 </head>
 <body>
@@ -726,7 +768,7 @@
           <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
       </div>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book Now</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
         <span></span><span></span><span></span>
       </button>
@@ -739,7 +781,7 @@
     <a href="salon.html">Salon</a>
     <a href="weight-loss.html">Weight Loss</a>
     <a href="about.html">About Us</a>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
   </div>
 </nav>
 
@@ -754,7 +796,7 @@
     <span class="section-label">Luxury Hair Services</span>
     <h1>Catch Your<br>Dream Hair.</h1>
     <p class="hero-sub">Precision cuts, stunning color, and transformative treatments delivered by stylists who actually listen and execute exactly what you envision.</p>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Appointment</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Appointment</a>
   </div>
 </section>
 
@@ -772,7 +814,7 @@
       <p>Whether you're looking for a bold color transformation, a healthy trim that finally gets the shape right, or a full extension install that changes your whole look, you're in the hands of stylists who are serious about their craft and genuinely invested in your results.</p>
       <p>Book online anytime through our Vagaro app. Full service menu and pricing are available at the link below.</p>
       <div class="intro-cta">
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">View Services &amp; Book Online</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">View Services &amp; Book Online</a>
       </div>
     </div>
   </div>
@@ -810,7 +852,7 @@
           <span class="svc-tag">Grey Blending</span>
         </div>
         <p class="svc-best"><strong>Best for:</strong> Anyone ready to love their color again</p>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book Color</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book Color</a>
       </div>
       <div class="svc-image">
         <img src="brand_assets/photos/catch.nash_1765115116_3782382202403204848_47410037410.jpg"
@@ -839,7 +881,7 @@
         <p class="svc-tagline">Dimension. Depth. Done right.</p>
         <p>Highlights done well can completely transform how your hair moves, catches light, and frames your face. Our colorists stay current with evolving highlight techniques, from lived-in babylights to bold, high-contrast dimension, and apply them with the precision and artistry that makes the difference between highlights that look natural and ones that look painted on.</p>
         <p class="svc-best"><strong>Best for:</strong> Adding brightness · Sun-kissed looks · Dimension without full color commitment</p>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book Highlights</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book Highlights</a>
       </div>
     </div>
   </div>
@@ -858,7 +900,7 @@
         <p class="svc-tagline">The right cut changes everything.</p>
         <p>A truly great haircut is one that works with your texture, flatters your face shape, and still looks good on a day when you didn't try that hard. Our stylists approach every cut as a custom creation, not a template. They'll talk through your lifestyle, how you like to style, and what hasn't been working before a single snip is made.</p>
         <p class="svc-best"><strong>Best for:</strong> All lengths and textures · First-time clients · Maintenance trims · Full transformations</p>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book a Cut</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book a Cut</a>
       </div>
       <div class="svc-image">
         <img src="brand_assets/photos/catch.nash_1766336935_3792631560819265416_47410037410.jpg"
@@ -892,7 +934,7 @@
           <span class="svc-tag">Other methods available</span>
         </div>
         <p class="svc-best"><strong>Best for:</strong> Adding length · Volume and fullness · Special events · Long-term transformation</p>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book an Extensions Consultation</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book an Extensions Consultation</a>
       </div>
     </div>
   </div>
@@ -910,7 +952,7 @@
         <p class="card-tagline">Frizz-free. Healthy. Half the styling time.</p>
         <p>Our Keratin treatment uses KERABOND™ Technology to smooth the hair, reduce curl up to 95%, and leave your hair healthy, shiny, and completely manageable, with significantly fewer fumes than traditional keratin treatments. Results last up to three months, and most clients cut their daily styling time in half. If you've been fighting your hair every morning, this is the treatment that changes that.</p>
         <p class="card-best"><strong>Best for:</strong> Frizzy or unruly hair · Curl reduction · Shine and manageability · Saving time</p>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="card-cta">Book Keratin</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="card-cta">Book Keratin</a>
       </div>
 
       <div class="svc-card" style="background: var(--ivory);">
@@ -918,7 +960,7 @@
         <p class="card-tagline">Walk in. Walk out glowing.</p>
         <p>Sometimes you just need to feel put-together, and that's exactly what a blowout at Catch delivers. Whether it's for a special occasion, a Monday that needs to feel like a win, or a last-minute event you forgot to plan for, our stylists will give you a blowout that holds, moves beautifully, and makes you feel like your most confident self.</p>
         <p class="card-best"><strong>Best for:</strong> Special occasions · Date nights · Pre-event prep · Everyday luxury</p>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="card-cta">Book a Blowout</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="card-cta">Book a Blowout</a>
       </div>
     </div>
   </div>
@@ -1057,7 +1099,7 @@
       <div class="divider"></div>
       <p>Book online anytime through our Vagaro app. Full service menu and pricing are available at the link. Find your service, pick your stylist, and choose the time that works for you. It really is that easy.</p>
       <div class="book-ctas">
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="font-size:11px; letter-spacing:0.18em;">Book Online Now</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark" style="font-size:11px; letter-spacing:0.18em;">Book Online Now</a>
         <p class="book-secondary">Questions? Reach us at <a href="mailto:catchsalon.nash@gmail.com">catchsalon.nash@gmail.com</a></p>
       </div>
     </div>
@@ -1075,11 +1117,32 @@
       <span class="section-label">One Appointment Away</span>
       <h2>Your best hair day is one appointment away.</h2>
       <p>Our stylists are ready to listen, advise, and deliver, whether you're coming in for the first time or you've been a Catch regular for years. We'd love to have you in the chair.</p>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Appointment</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Appointment</a>
     </div>
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOOKING MODAL
+═══════════════════════════════════════════════════════════ -->
+<div id="booking-modal" class="booking-overlay" role="dialog" aria-modal="true" aria-label="Book your appointment">
+  <div class="booking-modal-box">
+    <button class="booking-modal-close" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+    <div class="booking-modal-header">
+      <span style="display:block;font-family:var(--ff-sans);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--blush);margin-bottom:12px;">Catch Salon &amp; Spa</span>
+      <h3 style="font-family:var(--ff-display);font-size:clamp(22px,3vw,30px);font-weight:300;color:var(--charcoal);margin-bottom:8px;">Book Your Experience</h3>
+      <p style="font-size:13px;color:var(--taupe);line-height:1.6;">Share your details and we'll build a plan around you.</p>
+    </div>
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/cqkiYirPubm4mtd18Xhh"
+      style="width:100%;height:444px;border:none;border-radius:3px;display:block;"
+      id="inline-form-cqkiYirPubm4mtd18Xhh"
+      title="Share Your Info"
+    ></iframe>
+  </div>
+</div>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <!-- ═══════════════════════════════════════════════════════════
      FOOTER
@@ -1125,7 +1188,6 @@
           <li><a href="weight-loss.html">Liposonix</a></li>
           <li><a href="weight-loss.html">EMS</a></li>
           <li><a href="weight-loss.html">Combination Packages</a></li>
-          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
         </ul>
       </div>
 
@@ -1144,10 +1206,10 @@
       <div class="footer-col">
         <h4>Visit Us</h4>
         <ul>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Book an Appointment</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Memberships</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Payment Plans</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Contact Us</a></li>
         </ul>
       </div>
 
@@ -1229,6 +1291,23 @@
     el.style.transform = 'translateY(16px)';
     el.style.transition = `opacity 0.5s ease ${(i % 3) * 0.1}s, transform 0.5s ease ${(i % 3) * 0.1}s`;
     observer.observe(el);
+  });
+
+  // Booking modal
+  function openBookingModal() {
+    const m = document.getElementById('booking-modal');
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBookingModal() {
+    document.getElementById('booking-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('booking-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeBookingModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBookingModal();
   });
 </script>
 

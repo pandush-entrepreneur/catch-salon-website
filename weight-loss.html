@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Medical Weight Loss & Body Contouring | Catch Salon & Spa | Spring Hill, TN</title>
-  <meta name="description" content="Medically supervised Semaglutide weight loss paired with advanced body contouring: Cryo T-Shock, Sculptor, Liposonix, and EMS at Catch Salon &amp; Spa in Spring Hill, TN." />
+  <meta name="description" content="Non-surgical body contouring in Spring Hill, TN. Cryo T-Shock, Sculptor RF, Liposonix & EMS at Catch Salon & Spa. Freeze fat, tighten skin, no downtime. Book today." />
+  <link rel="icon" type="image/png" href="brand_assets/catch salo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -521,6 +522,16 @@
       object-position: center;
       border-radius: 2px;
     }
+    .treatment-image video {
+      width: 100%; height: 460px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 2px;
+      display: block;
+    }
+    @media (max-width: 1024px) {
+      .treatment-image video { height: 360px; }
+    }
 
     .treatment-copy .service-tag-pill {
       display: inline-block;
@@ -787,6 +798,47 @@
     @media (max-width: 480px) {
       .footer-top { grid-template-columns: 1fr; }
     }
+
+    /* ─── BOOKING MODAL ─────────────────────────────────────── */
+    .booking-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(20,18,16,0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .booking-overlay.open { display: flex; }
+    .booking-modal-box {
+      position: relative;
+      background: var(--white);
+      width: 100%;
+      max-width: 540px;
+      border-radius: 4px;
+      padding: 48px 44px 40px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .booking-modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none; border: none;
+      font-size: 22px; line-height: 1;
+      color: var(--taupe);
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .booking-modal-close:hover { color: var(--charcoal); }
+    .booking-modal-header { text-align: center; margin-bottom: 28px; }
+    @media (max-width: 600px) {
+      .booking-modal-box { padding: 40px 24px 28px; }
+    }
   </style>
 </head>
 <body>
@@ -817,7 +869,7 @@
           <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
       </div>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book Now</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
         <span></span><span></span><span></span>
       </button>
@@ -830,7 +882,7 @@
     <a href="salon.html">Salon</a>
     <a href="weight-loss.html">Weight Loss</a>
     <a href="about.html">About Us</a>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
   </div>
 </nav>
 
@@ -845,7 +897,7 @@
     <span class="section-label">Medical Weight Loss + Body Contouring</span>
     <h1>Catch the Body You've Been<br>Working Toward.</h1>
     <p class="hero-sub">A complete, medically supervised weight loss program, combined with advanced body contouring technology. You don't just lose the weight. You transform your body entirely.</p>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Consultation</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Consultation</a>
   </div>
 </section>
 
@@ -915,7 +967,7 @@
           <strong>Important:</strong> Semaglutide is a prescription medication. A consultation with our Nurse Practitioner is required before beginning treatment. Individual results may vary. Best results are achieved alongside a balanced diet and regular physical activity.
         </div>
 
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Your Semaglutide Consultation</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book Your Semaglutide Consultation</a>
       </div>
 
       <div class="sema-image">
@@ -1011,9 +1063,9 @@
     <!-- CRYO T-SHOCK -->
     <div class="treatment-block">
       <div class="treatment-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403204848_47410037410.jpg"
-             alt="Cryo T-Shock body contouring treatment"
-             loading="lazy" />
+        <video autoplay muted loop playsinline>
+          <source src="more recent photos/videos/Clip--1.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="treatment-copy">
         <span class="service-tag-pill">Cryo T-Shock</span>
@@ -1024,8 +1076,7 @@
           <h4>Best For</h4>
           <p>Stubborn fat pockets &middot; Clients near their goal weight &middot; Event prep (weddings, vacations) &middot; Post-Semaglutide contouring</p>
         </div>
-        <div class="treatment-offer">Intro Offer: $199 Cryo + Sculptor Combo</div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
     </div>
 
@@ -1041,22 +1092,21 @@
           <h4>Best For</h4>
           <p>Loose skin after weight loss &middot; Postpartum laxity &middot; Cellulite &middot; Skin tightening without surgery</p>
         </div>
-        <div class="treatment-offer">Intro Offers: $99 RF Tightening &middot; $199 Cryo + Sculptor Combo</div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
       <div class="treatment-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211014_47410037410.jpg"
-             alt="Sculptor vacuum RF skin tightening treatment"
-             loading="lazy" />
+        <video autoplay muted loop playsinline>
+          <source src="more recent photos/videos/Clip--2.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
 
     <!-- LIPOSONIX -->
     <div class="treatment-block">
       <div class="treatment-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202428358297_47410037410.jpg"
-             alt="Liposonix HIFU body contouring"
-             loading="lazy" />
+        <video autoplay muted loop playsinline>
+          <source src="more recent photos/videos/Clip--3.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="treatment-copy">
         <span class="service-tag-pill">Liposonix</span>
@@ -1068,7 +1118,7 @@
           <h4>Best For</h4>
           <p>Moderate abdominal fat &middot; Clients wanting stronger results &middot; Those not ready for surgical liposuction</p>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
     </div>
 
@@ -1084,12 +1134,12 @@
           <h4>Best For</h4>
           <p>Abdominal definition &middot; Glute lifting + toning &middot; Postpartum core recovery &middot; Enhancing fat-reduction results</p>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
       <div class="treatment-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202470295740_47410037410.jpg"
-             alt="EMS electrical muscle stimulation treatment"
-             loading="lazy" />
+        <video autoplay muted loop playsinline>
+          <source src="more recent photos/videos/Clip--4.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
 
@@ -1097,23 +1147,6 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     SIGNATURE COMBO
-═══════════════════════════════════════════════════════════ -->
-<section id="combo" aria-label="Signature combo protocol">
-  <div class="container">
-    <div class="combo-inner">
-      <span class="section-label">Our Signature Combo Protocol</span>
-      <h2>Cryo + Sculptor: The Ultimate Sculpting Duo.</h2>
-      <p class="combo-desc">Cryo targets and breaks down fat. Sculptor tightens the skin and improves contour. Together, they address both fat reduction and skin laxity in a single protocol. It's our most requested body treatment for a reason.</p>
-      <div class="combo-offer-line">
-        <span class="combo-price">$199</span>
-        <span class="combo-price-label">Cryo + Sculptor Intro Offer</span>
-      </div>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book the Combo Now</a>
-    </div>
-  </div>
-</section>
 
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -1145,7 +1178,7 @@
     </div>
 
     <div class="how-cta">
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Start Your Transformation</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Start Your Transformation</a>
     </div>
   </div>
 </section>
@@ -1161,12 +1194,33 @@
       <span class="section-label">It Starts With One Appointment</span>
       <h2>You've been putting in the work. Let us help you catch the results.</h2>
       <p>Whether you're just beginning your weight loss journey or looking to refine and sculpt what you've already achieved, Catch has a complete, customized program waiting for you. Book a consultation with our Nurse Practitioner today and let's build your plan together.</p>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Consultation</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Consultation</a>
       <a href="about.html" class="final-cta-secondary">Questions? Contact us &rarr;</a>
     </div>
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOOKING MODAL
+═══════════════════════════════════════════════════════════ -->
+<div id="booking-modal" class="booking-overlay" role="dialog" aria-modal="true" aria-label="Book your appointment">
+  <div class="booking-modal-box">
+    <button class="booking-modal-close" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+    <div class="booking-modal-header">
+      <span style="display:block;font-family:var(--ff-sans);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--blush);margin-bottom:12px;">Catch Salon &amp; Spa</span>
+      <h3 style="font-family:var(--ff-display);font-size:clamp(22px,3vw,30px);font-weight:300;color:var(--charcoal);margin-bottom:8px;">Book Your Experience</h3>
+      <p style="font-size:13px;color:var(--taupe);line-height:1.6;">Share your details and we'll build a plan around you.</p>
+    </div>
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/cqkiYirPubm4mtd18Xhh"
+      style="width:100%;height:444px;border:none;border-radius:3px;display:block;"
+      id="inline-form-cqkiYirPubm4mtd18Xhh"
+      title="Share Your Info"
+    ></iframe>
+  </div>
+</div>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <!-- ═══════════════════════════════════════════════════════════
      FOOTER
@@ -1212,7 +1266,6 @@
           <li><a href="weight-loss.html">Liposonix</a></li>
           <li><a href="weight-loss.html">EMS</a></li>
           <li><a href="weight-loss.html">Combination Packages</a></li>
-          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
         </ul>
       </div>
 
@@ -1229,10 +1282,10 @@
       <div class="footer-col">
         <h4>Visit Us</h4>
         <ul>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Book an Appointment</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Memberships</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Payment Plans</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Contact Us</a></li>
         </ul>
       </div>
 
@@ -1319,6 +1372,23 @@
     el.style.transform = 'translateY(16px)';
     el.style.transition = `opacity 0.5s ease ${(i % 3) * 0.1}s, transform 0.5s ease ${(i % 3) * 0.1}s`;
     observer.observe(el);
+  });
+
+  // Booking modal
+  function openBookingModal() {
+    const m = document.getElementById('booking-modal');
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBookingModal() {
+    document.getElementById('booking-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('booking-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeBookingModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBookingModal();
   });
 </script>
 

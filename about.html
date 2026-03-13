@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Catch Salon & Spa | Spring Hill, TN</title>
-  <meta name="description" content="Meet the team behind Catch Salon & Spa in Spring Hill, TN. Founded by Andrea Harbison, our boutique destination brings together luxury hair, advanced skin treatments, and body contouring." />
+  <meta name="description" content="Meet the team at Catch Salon & Spa, Spring Hill, TN. Founded by Andrea Harbison — boutique luxury hair, advanced skin treatments, and body contouring near Nashville." />
+  <link rel="icon" type="image/png" href="brand_assets/catch salo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -630,6 +631,47 @@
       .footer-top { grid-template-columns: 1fr; }
       .team-photo img { height: 340px; }
     }
+
+    /* ─── BOOKING MODAL ─────────────────────────────────────── */
+    .booking-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(20,18,16,0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .booking-overlay.open { display: flex; }
+    .booking-modal-box {
+      position: relative;
+      background: var(--white);
+      width: 100%;
+      max-width: 540px;
+      border-radius: 4px;
+      padding: 48px 44px 40px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .booking-modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none; border: none;
+      font-size: 22px; line-height: 1;
+      color: var(--taupe);
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .booking-modal-close:hover { color: var(--charcoal); }
+    .booking-modal-header { text-align: center; margin-bottom: 28px; }
+    @media (max-width: 600px) {
+      .booking-modal-box { padding: 40px 24px 28px; }
+    }
   </style>
 </head>
 <body>
@@ -661,7 +703,7 @@
           <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
       </div>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book Now</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
         <span></span><span></span><span></span>
       </button>
@@ -674,7 +716,7 @@
     <a href="salon.html">Salon</a>
     <a href="weight-loss.html">Weight Loss</a>
     <a href="about.html">About Us</a>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
   </div>
 </nav>
 
@@ -896,8 +938,8 @@
       <h2>Come see what we've built for you.</h2>
       <p>We'd love to meet you. Whether you're ready to book or just want to explore what's possible, our team is here with zero pressure and a genuine desire to help you catch exactly what you're looking for.</p>
       <div class="about-cta-buttons">
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Experience</a>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="about-cta-secondary">
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Experience</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="about-cta-secondary">
           Have questions? Contact us
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -906,6 +948,27 @@
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOOKING MODAL
+═══════════════════════════════════════════════════════════ -->
+<div id="booking-modal" class="booking-overlay" role="dialog" aria-modal="true" aria-label="Book your appointment">
+  <div class="booking-modal-box">
+    <button class="booking-modal-close" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+    <div class="booking-modal-header">
+      <span style="display:block;font-family:var(--ff-sans);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--blush);margin-bottom:12px;">Catch Salon &amp; Spa</span>
+      <h3 style="font-family:var(--ff-display);font-size:clamp(22px,3vw,30px);font-weight:300;color:var(--charcoal);margin-bottom:8px;">Book Your Experience</h3>
+      <p style="font-size:13px;color:var(--taupe);line-height:1.6;">Share your details and we'll build a plan around you.</p>
+    </div>
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/cqkiYirPubm4mtd18Xhh"
+      style="width:100%;height:444px;border:none;border-radius:3px;display:block;"
+      id="inline-form-cqkiYirPubm4mtd18Xhh"
+      title="Share Your Info"
+    ></iframe>
+  </div>
+</div>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <!-- ═══════════════════════════════════════════════════════════
      FOOTER
@@ -951,7 +1014,6 @@
           <li><a href="weight-loss.html">Liposonix</a></li>
           <li><a href="weight-loss.html">EMS</a></li>
           <li><a href="weight-loss.html">Combination Packages</a></li>
-          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
         </ul>
       </div>
 
@@ -968,10 +1030,10 @@
       <div class="footer-col">
         <h4>Visit Us</h4>
         <ul>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Book an Appointment</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Memberships</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Payment Plans</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Contact Us</a></li>
         </ul>
       </div>
 
@@ -1053,6 +1115,23 @@
     el.style.transform = 'translateY(20px)';
     el.style.transition = `opacity 0.6s ease ${(i % 2) * 0.1}s, transform 0.6s ease ${(i % 2) * 0.1}s`;
     observer.observe(el);
+  });
+
+  // Booking modal
+  function openBookingModal() {
+    const m = document.getElementById('booking-modal');
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBookingModal() {
+    document.getElementById('booking-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('booking-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeBookingModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBookingModal();
   });
 </script>
 

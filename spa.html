@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spa Services | Catch Salon & Spa | Spring Hill, TN</title>
-  <meta name="description" content="Advanced spa treatments in Spring Hill, TN. HydraFacial, RF Microneedling, HIFU, CO2 Laser, IPL, LED Therapy, Cryotherapy Facial and more. Real results, no surgery." />
+  <meta name="description" content="Advanced skin treatments in Spring Hill, TN. HydraFacial, RF Microneedling, CO2 Laser, IPL Photofacial, Chemical Peels & more. Real results, no surgery. Book today." />
+  <link rel="icon" type="image/png" href="brand_assets/catch salo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -678,6 +679,47 @@
     @media (max-width: 480px) {
       .footer-top { grid-template-columns: 1fr; }
     }
+
+    /* ─── BOOKING MODAL ─────────────────────────────────────── */
+    .booking-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(20,18,16,0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .booking-overlay.open { display: flex; }
+    .booking-modal-box {
+      position: relative;
+      background: var(--white);
+      width: 100%;
+      max-width: 540px;
+      border-radius: 4px;
+      padding: 48px 44px 40px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .booking-modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none; border: none;
+      font-size: 22px; line-height: 1;
+      color: var(--taupe);
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .booking-modal-close:hover { color: var(--charcoal); }
+    .booking-modal-header { text-align: center; margin-bottom: 28px; }
+    @media (max-width: 600px) {
+      .booking-modal-box { padding: 40px 24px 28px; }
+    }
   </style>
 </head>
 <body>
@@ -708,7 +750,7 @@
           <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
       </div>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book Now</a>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
         <span></span><span></span><span></span>
       </button>
@@ -721,7 +763,7 @@
     <a href="salon.html">Salon</a>
     <a href="weight-loss.html">Weight Loss</a>
     <a href="about.html">About Us</a>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
   </div>
 </nav>
 
@@ -736,7 +778,7 @@
     <span class="section-label">The Ultimate Anti-Aging Experience</span>
     <h1>Catch the Skin You've<br>Always Wanted.</h1>
     <p class="hero-sub">Advanced, results-driven spa treatments that go far beyond the surface. Designed to restore, tighten, and transform your skin from the inside out.</p>
-    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Treatment</a>
+    <a href="#" onclick="openBookingModal(); return false;" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Treatment</a>
   </div>
 </section>
 
@@ -785,10 +827,10 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">All skin types &nbsp;·&nbsp; First-time clients &nbsp;·&nbsp; Maintenance glow</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1772721015_3846185069274264869_47410037410.jpg"
+        <img src="more recent photos/get-glowing-skin.jpeg"
              alt="Signature facial treatment at Catch Spa"
              loading="lazy" />
       </div>
@@ -801,7 +843,7 @@
   <div class="container">
     <div class="service-block-inner">
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1762950551_3764224511277271519_47410037410.jpg"
+        <img src="more recent photos/67712e_8493343d82064e649a4c839d737297bc~mv2.jpeg"
              alt="Hydration facial at Catch Spa"
              loading="lazy" />
       </div>
@@ -814,7 +856,7 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Dull skin &nbsp;·&nbsp; Clogged pores &nbsp;·&nbsp; Pre-event glow</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
       </div>
     </div>
   </div>
@@ -833,10 +875,10 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Dull or dehydrated skin &nbsp;·&nbsp; Anti-aging &nbsp;·&nbsp; Sensitive clients</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1766942979_3797715421660036263_47410037410.jpg"
+        <img src="more recent photos/67712e_1ed5587f55ad49c1a503bf09c485fc09~mv2.jpeg"
              alt="Non-needle mesotherapy at Catch Spa"
              loading="lazy" />
       </div>
@@ -849,7 +891,7 @@
   <div class="container">
     <div class="service-block-inner">
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403204848_47410037410.jpg"
+        <img src="more recent photos/71ba6a_f163d38ac21a4d3195f26254e4758365~mv2.jpeg"
              alt="HIFU non-surgical facelift at Catch Spa"
              loading="lazy" />
       </div>
@@ -865,7 +907,7 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Skin laxity &nbsp;·&nbsp; Jawline + neck tightening &nbsp;·&nbsp; Deep wrinkles &nbsp;·&nbsp; Clients 35+</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
       </div>
     </div>
   </div>
@@ -884,10 +926,10 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Fine lines + wrinkles &nbsp;·&nbsp; Acne scarring &nbsp;·&nbsp; Skin laxity &nbsp;·&nbsp; Enlarged pores &nbsp;·&nbsp; Texture</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1763653668_3770122682944810027_47410037410.jpg"
+        <img src="more recent photos/71ba6a_631293da2a7a48f2a889a907b368a3ea~mv2.jpeg"
              alt="RF Microneedling at Catch Spa"
              loading="lazy" />
       </div>
@@ -900,7 +942,7 @@
   <div class="container">
     <div class="service-block-inner">
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211014_47410037410.jpg"
+        <img src="more recent photos/1000035362.jpeg"
              alt="Cryotherapy facial at Catch Spa"
              loading="lazy" />
       </div>
@@ -913,7 +955,7 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Puffiness &nbsp;·&nbsp; Redness &nbsp;·&nbsp; Pre-event &nbsp;·&nbsp; Collagen boost &nbsp;·&nbsp; Glow enhancement</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
       </div>
     </div>
   </div>
@@ -932,10 +974,10 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Fine lines &nbsp;·&nbsp; Active acne &nbsp;·&nbsp; Post-treatment recovery &nbsp;·&nbsp; Overall skin health</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn btn-dark">Book This Treatment</a>
       </div>
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211972_47410037410.jpg"
+        <img src="more recent photos/67712e_9c411820b30348ce9119bd3325539916~mv2.jpeg"
              alt="LED therapy facial at Catch Spa"
              loading="lazy" />
       </div>
@@ -948,7 +990,7 @@
   <div class="container">
     <div class="service-block-inner">
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202428358297_47410037410.jpg"
+        <img src="more recent photos/67712e_3119b359d7664c0681288204163613f8~mv2.jpeg"
              alt="IPL photofacial at Catch Spa"
              loading="lazy" />
       </div>
@@ -961,38 +1003,7 @@
           <span class="best-for-label">Best for</span>
           <span class="best-for-text">Dark spots &nbsp;·&nbsp; Sun damage &nbsp;·&nbsp; Rosacea &nbsp;·&nbsp; Uneven skin tone &nbsp;·&nbsp; Acne scarring</span>
         </div>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 9. BODY CONTOURING — SCULPTOR -->
-<div class="service-block">
-  <div class="container">
-    <div class="service-block-inner">
-      <div class="service-meta">
-        <span class="service-pill">Body Contouring</span>
-        <h2>Body Contouring: Sculptor</h2>
-        <span class="service-tagline">Tighten. Smooth. Contour.</span>
-        <p class="service-body">Our Sculptor combines vacuum therapy, radio frequency, and infrared technology to shrink fat cells, smooth the appearance of cellulite, and dramatically improve skin texture and tone. The result? A visibly more sculpted, firm, and contoured body. No surgery, no needles, no downtime.</p>
-        <p class="service-body" style="font-size:13px; color:#7a7a7a; font-style:italic;">Full body contouring options (Cryo T-Shock, Liposonix, and EMS) are available on our Weight Loss page.</p>
-        <div class="best-for">
-          <span class="best-for-label">Best for</span>
-          <span class="best-for-text">Cellulite &nbsp;·&nbsp; Loose skin &nbsp;·&nbsp; Post-weight loss &nbsp;·&nbsp; Postpartum laxity &nbsp;·&nbsp; Body contouring</span>
-        </div>
-        <div class="service-ctas">
-          <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
-          <a href="weight-loss.html" class="link-arrow">
-            See All Body Treatments
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202470295740_47410037410.jpg"
-             alt="Sculptor body contouring at Catch Spa"
-             loading="lazy" />
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
       </div>
     </div>
   </div>
@@ -1003,7 +1014,7 @@
   <div class="container">
     <div class="service-block-inner">
       <div class="service-image">
-        <img src="brand_assets/photos/catch.nash_1765115116_3782382202629670230_47410037410.jpg"
+        <img src="more recent photos/67712e_9054d493238f40afa5d5c2191d5c6a02~mv2.jpeg"
              alt="Hair removal services at Catch Spa"
              loading="lazy" />
       </div>
@@ -1017,7 +1028,7 @@
           <li>Facial Waxing</li>
           <li>Laser Hair Removal</li>
         </ul>
-        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+        <a href="#" onclick="openBookingModal(); return false;" class="btn">Book This Treatment</a>
       </div>
     </div>
   </div>
@@ -1099,11 +1110,32 @@
       <span class="section-label">Your Skin's Next Chapter</span>
       <h2>Your skin's best chapter is waiting.</h2>
       <p>Whether you're brand new to aesthetic treatments or ready to take the next step in your anti-aging journey, we're here to guide you. Zero pressure, and a plan built entirely around you.</p>
-      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Experience</a>
+      <a href="#" onclick="openBookingModal(); return false;" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Experience</a>
     </div>
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOOKING MODAL
+═══════════════════════════════════════════════════════════ -->
+<div id="booking-modal" class="booking-overlay" role="dialog" aria-modal="true" aria-label="Book your appointment">
+  <div class="booking-modal-box">
+    <button class="booking-modal-close" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+    <div class="booking-modal-header">
+      <span style="display:block;font-family:var(--ff-sans);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--blush);margin-bottom:12px;">Catch Salon &amp; Spa</span>
+      <h3 style="font-family:var(--ff-display);font-size:clamp(22px,3vw,30px);font-weight:300;color:var(--charcoal);margin-bottom:8px;">Book Your Experience</h3>
+      <p style="font-size:13px;color:var(--taupe);line-height:1.6;">Share your details and we'll build a plan around you.</p>
+    </div>
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/cqkiYirPubm4mtd18Xhh"
+      style="width:100%;height:444px;border:none;border-radius:3px;display:block;"
+      id="inline-form-cqkiYirPubm4mtd18Xhh"
+      title="Share Your Info"
+    ></iframe>
+  </div>
+</div>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <!-- ═══════════════════════════════════════════════════════════
      FOOTER
@@ -1149,7 +1181,6 @@
           <li><a href="weight-loss.html">Liposonix</a></li>
           <li><a href="weight-loss.html">EMS</a></li>
           <li><a href="weight-loss.html">Combination Packages</a></li>
-          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
         </ul>
       </div>
 
@@ -1166,10 +1197,10 @@
       <div class="footer-col">
         <h4>Visit Us</h4>
         <ul>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
-          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Book an Appointment</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Memberships</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Payment Plans</a></li>
+          <li><a href="#" onclick="openBookingModal(); return false;">Contact Us</a></li>
         </ul>
       </div>
 
@@ -1256,6 +1287,23 @@
     el.style.transform = 'translateY(20px)';
     el.style.transition = `opacity 0.6s ease ${(i % 4) * 0.08}s, transform 0.6s ease ${(i % 4) * 0.08}s`;
     observer.observe(el);
+  });
+
+  // Booking modal
+  function openBookingModal() {
+    const m = document.getElementById('booking-modal');
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBookingModal() {
+    document.getElementById('booking-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('booking-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeBookingModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBookingModal();
   });
 </script>
 
