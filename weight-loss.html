@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Weight Loss & Body Contouring | Catch Salon & Spa | Spring Hill, TN</title>
+  <meta name="description" content="Medically supervised Semaglutide weight loss paired with advanced body contouring: Cryo T-Shock, Sculptor, Liposonix, and EMS at Catch Salon &amp; Spa in Spring Hill, TN." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --cream:    #FAFAF7;
+      --ivory:    #F5F0E8;
+      --charcoal: #1C1C1C;
+      --espresso: #2B2220;
+      --blush:    #C9A49A;
+      --taupe:    #B5A89A;
+      --gold:     #C8A97E;
+      --white:    #FFFFFF;
+
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-sans:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+      --max-w: 1180px;
+      --section-pad: 100px;
+    }
+
+    body {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(44px, 6vw, 74px);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+    }
+    h2 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #3D3D3D;
+    }
+
+    /* ─── SECTION LABEL ────────────────────────────────────────── */
+    .section-label {
+      display: block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 18px;
+    }
+
+    /* ─── DIVIDER ──────────────────────────────────────────────── */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--blush);
+      margin: 24px auto;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+      border-radius: 2px;
+    }
+    .btn:hover { background: var(--charcoal); color: var(--white); }
+
+    .btn-dark { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+    .btn-dark:hover { background: var(--espresso); border-color: var(--espresso); color: var(--white); }
+
+    .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-gold:hover { background: #b8996e; border-color: #b8996e; color: var(--white); }
+
+    .btn-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.65); }
+    .btn-white:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       NAV — LIQUID GLASS
+    ═══════════════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(250, 250, 247, 0.55);
+      backdrop-filter: blur(28px) saturate(1.7);
+      -webkit-backdrop-filter: blur(28px) saturate(1.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 1px 0 rgba(0, 0, 0, 0.04),
+        0 4px 24px rgba(0, 0, 0, 0.05);
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    #nav.scrolled {
+      background: rgba(250, 250, 247, 0.75);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        0 2px 32px rgba(0, 0, 0, 0.08);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 76px;
+    }
+    .nav-logo img { height: 34px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      position: relative;
+      padding-bottom: 3px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--blush);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+
+    .nav-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-social { display: flex; gap: 14px; align-items: center; }
+    .nav-social a svg {
+      width: 17px; height: 17px;
+      stroke: var(--taupe); fill: none;
+      transition: stroke 0.2s;
+    }
+    .nav-social a:hover svg { stroke: var(--charcoal); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--charcoal);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: rgba(250, 250, 247, 0.95);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(181,168,154,0.2);
+      padding: 24px 40px 32px;
+      gap: 20px;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      padding-top: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1772721015_3846185069274264869_47410037410.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+    #hero.loaded .hero-bg { transform: scale(1); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: rgba(20, 18, 16, 0.72);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-content .section-label {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+    }
+    .hero-content h1 {
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .hero-content .hero-sub {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       INTRO
+    ═══════════════════════════════════════════════════════════ */
+    #intro {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .intro-inner {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .intro-inner h2 { margin-bottom: 28px; }
+    .intro-inner p { margin-bottom: 18px; color: #4a4a4a; }
+    .intro-inner p:last-of-type { margin-bottom: 0; }
+    .intro-np-note {
+      font-family: var(--ff-display);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--charcoal);
+      margin-top: 36px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(181,168,154,0.3);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       SEMAGLUTIDE
+    ═══════════════════════════════════════════════════════════ */
+    #semaglutide {
+      background: var(--ivory);
+      padding: var(--section-pad) 0;
+    }
+    .sema-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .sema-copy h2 { margin-bottom: 20px; }
+    .sema-copy > p { margin-bottom: 18px; color: #4a4a4a; }
+
+    .sema-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 36px 0;
+      border-top: 1px solid rgba(181,168,154,0.3);
+    }
+    .sema-benefit {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(181,168,154,0.3);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .benefit-check {
+      width: 18px; height: 18px; min-width: 18px;
+      margin-top: 2px;
+    }
+    .benefit-check svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .benefit-text h4 {
+      font-family: var(--ff-sans);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+    .benefit-text p { font-size: 14px; line-height: 1.7; color: #5a5a5a; }
+
+    .sema-note {
+      background: rgba(201,164,154,0.1);
+      border: 1px solid rgba(201,164,154,0.35);
+      padding: 18px 24px;
+      border-radius: 2px;
+      margin: 0 0 32px;
+      font-size: 14px; color: #5a5a5a; line-height: 1.7;
+    }
+    .sema-note strong { color: var(--charcoal); }
+
+    .sema-image { position: relative; display: flex; flex-direction: column; gap: 12px; align-self: center; }
+    .sema-image img {
+      width: 100%; height: 380px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 2px;
+    }
+    .sema-image img.sema-img-second {
+      height: 240px;
+      object-position: center center;
+    }
+    .sema-image-badge {
+      position: absolute;
+      bottom: 28px; left: -28px;
+      background: var(--white);
+      padding: 20px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-left: 3px solid var(--gold);
+    }
+    .badge-num {
+      font-family: var(--ff-display);
+      font-size: 36px; font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1;
+      display: block;
+    }
+    .badge-label {
+      font-size: 11px; letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-top: 4px;
+      display: block;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       LIPO MINO
+    ═══════════════════════════════════════════════════════════ */
+    #lipo-mino {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .lipo-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .lipo-image img {
+      width: 100%; height: 500px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 2px;
+    }
+    .lipo-copy h2 { margin-bottom: 20px; }
+    .lipo-copy > p { margin-bottom: 18px; color: #4a4a4a; }
+    .lipo-copy > p:last-of-type { margin-bottom: 0; }
+
+    .lipo-benefits {
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .lipo-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .lipo-dot {
+      width: 5px; height: 5px; min-width: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .lipo-benefit-item span { font-size: 15px; color: #4a4a4a; line-height: 1.5; }
+
+    .lipo-cta-note {
+      font-family: var(--ff-display);
+      font-size: 17px;
+      font-style: italic;
+      color: var(--taupe);
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(181,168,154,0.3);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       BODY CONTOURING — DARK INTRO
+    ═══════════════════════════════════════════════════════════ */
+    #contouring-intro {
+      background: var(--espresso);
+      padding: var(--section-pad) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .contouring-intro-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1765115116_3782382202629670230_47410037410.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.08;
+    }
+    .contouring-intro-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contouring-intro-inner .section-label { color: var(--blush); }
+    .contouring-intro-inner h2 {
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .contouring-intro-inner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px; line-height: 1.85;
+      margin-bottom: 18px;
+    }
+    .contouring-intro-inner .competitive-line {
+      font-family: var(--ff-display);
+      font-size: 20px;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      margin: 32px 0;
+    }
+    .contouring-intro-inner .btn-white {
+      margin-top: 12px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       BODY CONTOURING TREATMENTS
+    ═══════════════════════════════════════════════════════════ */
+    #treatments {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .treatment-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      padding: 72px 0;
+      border-bottom: 1px solid rgba(181,168,154,0.2);
+    }
+    .treatment-block:first-child { padding-top: 0; }
+    .treatment-block:last-child { border-bottom: none; padding-bottom: 0; }
+    .treatment-block.reverse { }
+
+    .treatment-image img {
+      width: 100%; height: 460px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 2px;
+    }
+
+    .treatment-copy .service-tag-pill {
+      display: inline-block;
+      font-size: 10px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--gold);
+      padding: 5px 14px;
+      margin-bottom: 16px;
+      border-radius: 2px;
+    }
+    .treatment-copy h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      margin-bottom: 12px;
+    }
+    .treatment-tagline {
+      font-family: var(--ff-display);
+      font-size: 18px; font-style: italic;
+      color: var(--taupe);
+      margin-bottom: 24px;
+    }
+    .treatment-copy > p { margin-bottom: 16px; font-size: 15px; color: #4a4a4a; }
+    .treatment-copy > p:last-of-type { margin-bottom: 0; }
+
+    .treatment-best-for {
+      margin: 20px 0 28px;
+      padding: 16px 20px;
+      background: var(--ivory);
+      border-left: 3px solid var(--blush);
+      border-radius: 2px;
+    }
+    .treatment-best-for h4 {
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .treatment-best-for p { font-size: 13px; color: #5a5a5a; line-height: 1.6; }
+
+    .treatment-offer {
+      font-size: 13px; letter-spacing: 0.06em;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       SIGNATURE COMBO
+    ═══════════════════════════════════════════════════════════ */
+    #combo {
+      background: linear-gradient(135deg, #f5ede0 0%, #ede3d4 100%);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid rgba(200,169,126,0.2);
+      border-bottom: 1px solid rgba(200,169,126,0.2);
+    }
+    .combo-inner {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .combo-inner .section-label { color: var(--gold); }
+    .combo-inner h2 { margin-bottom: 20px; }
+    .combo-inner .combo-desc {
+      font-size: 16px; line-height: 1.85; color: #4a4a4a;
+      margin-bottom: 16px;
+    }
+    .combo-offer-line {
+      margin: 36px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 16px;
+    }
+    .combo-price {
+      font-family: var(--ff-display);
+      font-size: 72px; font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .combo-price-label {
+      font-size: 11px; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       HOW IT WORKS TOGETHER
+    ═══════════════════════════════════════════════════════════ */
+    #how-it-works {
+      background: var(--ivory);
+      padding: var(--section-pad) 0;
+    }
+    .how-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 72px;
+    }
+    .how-header h2 { margin-bottom: 16px; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(181,168,154,0.2);
+      margin-bottom: 64px;
+    }
+    .step-card {
+      background: var(--ivory);
+      padding: 52px 40px;
+    }
+    .step-num {
+      font-family: var(--ff-display);
+      font-size: 72px; font-weight: 300;
+      color: rgba(201,164,154,0.2);
+      line-height: 1;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .step-card h3 {
+      font-family: var(--ff-sans);
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+    .step-card p { font-size: 15px; line-height: 1.8; color: #5a5a5a; }
+    .how-cta { text-align: center; }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       CLOSING CTA
+    ═══════════════════════════════════════════════════════════ */
+    #final-cta {
+      position: relative;
+      padding: var(--section-pad) 0;
+      text-align: center;
+      overflow: hidden;
+      background: var(--espresso);
+    }
+    .final-cta-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1772547918_3844733027720639050_47410037410.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.1;
+    }
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .final-cta-inner .section-label { color: var(--blush); margin-bottom: 20px; }
+    .final-cta-inner h2 {
+      color: var(--white);
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 24px;
+    }
+    .final-cta-inner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px; line-height: 1.85;
+      margin-bottom: 44px;
+    }
+    .final-cta-secondary {
+      display: block;
+      margin-top: 20px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .final-cta-secondary:hover { color: rgba(255,255,255,0.75); }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--espresso);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 80px 0 40px;
+      color: rgba(255,255,255,0.55);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 26px; width: auto; filter: invert(1) brightness(0.8); }
+    .footer-tagline {
+      font-family: var(--ff-display);
+      font-size: 14px; font-style: italic;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 8px;
+    }
+    .footer-location { font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; }
+    .footer-social { display: flex; gap: 14px; margin-top: 24px; }
+    .footer-social a svg { width: 18px; height: 18px; stroke: rgba(255,255,255,0.35); fill: none; transition: stroke 0.2s; }
+    .footer-social a:hover svg { stroke: rgba(255,255,255,0.8); }
+    .footer-col h4 {
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
+    .footer-col ul li a.highlight { color: var(--gold); }
+    .footer-col ul li a.highlight:hover { color: #d4ba8e; }
+    .footer-bottom {
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.5); }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .sema-split { grid-template-columns: 1fr; gap: 48px; }
+      .sema-image img { height: 420px; }
+      .sema-image-badge { left: 0; }
+      .lipo-inner { grid-template-columns: 1fr; gap: 48px; }
+      .lipo-image img { height: 360px; }
+      .treatment-block { grid-template-columns: 1fr; gap: 40px; }
+      .treatment-block.reverse .treatment-image { order: -1; }
+      .treatment-image img { height: 360px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px; }
+      .container { padding: 0 24px; }
+      .nav-inner { grid-template-columns: auto 1fr auto; padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-right .btn { display: none; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-legal { flex-wrap: wrap; justify-content: center; }
+      .nav-mobile { padding: 24px; }
+      .combo-price-badge { padding: 24px 36px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Catch Salon & Spa">
+      <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="salon.html">Salon</a></li>
+      <li><a href="weight-loss.html" class="active">Weight Loss</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-mobile" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="spa.html">Spa</a>
+    <a href="salon.html">Salon</a>
+    <a href="weight-loss.html">Weight Loss</a>
+    <a href="about.html">About Us</a>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="section-label">Medical Weight Loss + Body Contouring</span>
+    <h1>Catch the Body You've Been<br>Working Toward.</h1>
+    <p class="hero-sub">A complete, medically supervised weight loss program, combined with advanced body contouring technology. You don't just lose the weight. You transform your body entirely.</p>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Consultation</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     INTRO
+═══════════════════════════════════════════════════════════ -->
+<section id="intro" aria-label="Introduction">
+  <div class="container">
+    <div class="intro-inner">
+      <span class="section-label">A Complete Program</span>
+      <h2>Real weight loss. Real results.<br>A real plan built for you.</h2>
+      <div class="divider"></div>
+      <p>Most weight loss programs give you a generic plan and leave you to figure out the rest. At Catch, we do it differently. Our medically supervised weight loss program pairs the latest in prescription weight loss medication with advanced body contouring treatments. We're not just helping you lose weight. We're helping you sculpt, tighten, and truly transform your body from the inside out.</p>
+      <p class="intro-np-note">Every client begins with a consultation with our Nurse Practitioner. Because real results start with a real conversation.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEMAGLUTIDE
+═══════════════════════════════════════════════════════════ -->
+<section id="semaglutide" aria-label="Semaglutide weight loss">
+  <div class="container">
+    <div class="sema-split">
+
+      <div class="sema-copy">
+        <span class="section-label">Medical Weight Loss</span>
+        <h2>The weight loss breakthrough you've been waiting for.</h2>
+        <p>Semaglutide is a clinically proven, FDA-recognized injectable medication that has transformed the way medical professionals approach weight management. Originally developed to treat type 2 diabetes, it was quickly recognized for something remarkable: its ability to produce significant, sustained weight loss.</p>
+        <p>Here's how it works: Semaglutide acts on receptors in the brain that regulate appetite and fullness, naturally reducing hunger and food intake without willpower battles or crash dieting. The result is steady, meaningful weight loss that's supported by your body's own biology.</p>
+        <p>At Catch, your Semaglutide program is managed by our Nurse Practitioner, who will review your full health history, current medications, and personal goals before building a treatment plan designed specifically for you.</p>
+
+        <div class="sema-benefits">
+          <div class="sema-benefit">
+            <div class="benefit-check"><svg viewBox="0 0 18 18"><polyline points="2,9 7,13.5 16,4.5"/></svg></div>
+            <div class="benefit-text">
+              <h4>Clinically Proven Results</h4>
+              <p>Semaglutide has demonstrated significant reductions in body weight in clinical trials, making it one of the most effective non-surgical weight loss tools available today.</p>
+            </div>
+          </div>
+          <div class="sema-benefit">
+            <div class="benefit-check"><svg viewBox="0 0 18 18"><polyline points="2,9 7,13.5 16,4.5"/></svg></div>
+            <div class="benefit-text">
+              <h4>Simple Weekly Injections</h4>
+              <p>No complicated pill schedules. No daily routines to manage. One simple weekly injection, administered with full guidance from our team.</p>
+            </div>
+          </div>
+          <div class="sema-benefit">
+            <div class="benefit-check"><svg viewBox="0 0 18 18"><polyline points="2,9 7,13.5 16,4.5"/></svg></div>
+            <div class="benefit-text">
+              <h4>Beyond the Scale</h4>
+              <p>Alongside weight loss, Semaglutide may help improve metabolic markers like blood sugar and blood pressure, supporting your overall health, not just the number on the scale.</p>
+            </div>
+          </div>
+          <div class="sema-benefit">
+            <div class="benefit-check"><svg viewBox="0 0 18 18"><polyline points="2,9 7,13.5 16,4.5"/></svg></div>
+            <div class="benefit-text">
+              <h4>Expert Support, Every Step</h4>
+              <p>From your first consultation through your ongoing treatment, our Nurse Practitioner is with you. She adjusts your plan as you progress and keeps your safety and success at the center of everything.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sema-note">
+          <strong>Important:</strong> Semaglutide is a prescription medication. A consultation with our Nurse Practitioner is required before beginning treatment. Individual results may vary. Best results are achieved alongside a balanced diet and regular physical activity.
+        </div>
+
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Your Semaglutide Consultation</a>
+      </div>
+
+      <div class="sema-image">
+        <img src="brand_assets/photos/catch.nash_1763512907_3768941896568421194_47410037410.jpg"
+             alt="Nurse Practitioner consultation at Catch Salon & Spa"
+             loading="lazy" />
+        <img src="brand_assets/photos/catch.nash_1752077824_3673017466754207286_47410037410.jpg"
+             alt="Catch Salon & Spa studio interior"
+             loading="lazy"
+             class="sema-img-second" />
+        <div class="sema-image-badge">
+          <span class="badge-num">NP</span>
+          <span class="badge-label">Medically Supervised</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     LIPO MINO
+═══════════════════════════════════════════════════════════ -->
+<section id="lipo-mino" aria-label="Lipo Mino injections">
+  <div class="container">
+    <div class="lipo-inner">
+
+      <div class="lipo-image">
+        <img src="brand_assets/photos/catch.nash_1764422605_3776572997402380965_47410037410.jpg"
+             alt="Lipo Mino injection treatment at Catch"
+             loading="lazy" />
+      </div>
+
+      <div class="lipo-copy">
+        <span class="section-label">Enhance Your Results</span>
+        <h2>Supercharge your weight loss with Lipo Mino.</h2>
+        <p>To maximize your results, we pair your Semaglutide program with Lipo Mino, a powerful lipotropic injection blend designed to accelerate fat metabolism, boost energy, and support your body through the weight loss process.</p>
+        <p>Lipo Mino combines a targeted mix of vitamins, amino acids, and fat-burning compounds that work alongside your Semaglutide to help your body shed fat more efficiently, maintain energy levels, and feel your best throughout your transformation.</p>
+        <p>Think of it as the fuel that keeps your momentum going, week after week.</p>
+
+        <div class="lipo-benefits">
+          <div class="lipo-benefit-item">
+            <div class="lipo-dot"></div>
+            <span>Accelerates fat metabolism</span>
+          </div>
+          <div class="lipo-benefit-item">
+            <div class="lipo-dot"></div>
+            <span>Boosts energy and reduces fatigue</span>
+          </div>
+          <div class="lipo-benefit-item">
+            <div class="lipo-dot"></div>
+            <span>Supports liver function during weight loss</span>
+          </div>
+          <div class="lipo-benefit-item">
+            <div class="lipo-dot"></div>
+            <span>Enhances and complements your Semaglutide results</span>
+          </div>
+        </div>
+
+        <p class="lipo-cta-note">Ask about adding Lipo Mino to your weekly program during your consultation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BODY CONTOURING — DARK INTRO
+═══════════════════════════════════════════════════════════ -->
+<section id="contouring-intro" aria-label="Body contouring introduction">
+  <div class="contouring-intro-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="contouring-intro-inner">
+      <span class="section-label">Body Contouring</span>
+      <h2>Lose the weight.<br>Then sculpt what's underneath.</h2>
+      <p>Weight loss changes your life. But sometimes it leaves behind loose skin, stubborn pockets of fat, or areas that just won't respond no matter how hard you work. That's where our body contouring program comes in.</p>
+      <p>At Catch, we combine non-surgical technologies strategically to address what the scale simply can't: targeting fat cells directly, tightening loose skin, and sculpting the contours you've worked so hard to reveal.</p>
+      <p class="competitive-line">This is our competitive advantage: we don't just offer one machine. We build a customized body plan.</p>
+      <a href="#treatments" class="btn btn-white">Explore Body Contouring &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BODY CONTOURING TREATMENTS
+═══════════════════════════════════════════════════════════ -->
+<section id="treatments" aria-label="Body contouring treatments">
+  <div class="container">
+
+    <!-- CRYO T-SHOCK -->
+    <div class="treatment-block">
+      <div class="treatment-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403204848_47410037410.jpg"
+             alt="Cryo T-Shock body contouring treatment"
+             loading="lazy" />
+      </div>
+      <div class="treatment-copy">
+        <span class="service-tag-pill">Cryo T-Shock</span>
+        <h2>Freeze stubborn fat.<br>Target what workouts won't.</h2>
+        <p class="treatment-tagline">Freeze stubborn fat. Target what workouts won't.</p>
+        <p>Cryo T-Shock uses alternating hot and cold temperatures to break down and eliminate stubborn fat cells in targeted areas: lower abdomen, flanks, inner thighs, arms, and more. The body naturally processes and eliminates the treated fat cells over the following weeks, delivering gradual, natural-looking fat reduction with zero surgery and zero downtime.</p>
+        <div class="treatment-best-for">
+          <h4>Best For</h4>
+          <p>Stubborn fat pockets &middot; Clients near their goal weight &middot; Event prep (weddings, vacations) &middot; Post-Semaglutide contouring</p>
+        </div>
+        <div class="treatment-offer">Intro Offer: $199 Cryo + Sculptor Combo</div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+    </div>
+
+    <!-- SCULPTOR -->
+    <div class="treatment-block reverse">
+      <div class="treatment-copy">
+        <span class="service-tag-pill">Sculptor</span>
+        <h2>Tighten skin. Smooth cellulite.<br>Lift and contour.</h2>
+        <p class="treatment-tagline">Vacuum + Radio Frequency</p>
+        <p>For anyone dealing with loose or lax skin after weight loss, the Sculptor is one of our most powerful tools. Combining vacuum therapy with radio frequency energy, it heats the deeper layers of skin to stimulate collagen and elastin production, tighten tissue, improve circulation, and visibly smooth cellulite.</p>
+        <p>Particularly powerful for post-weight loss clients and postpartum moms dealing with skin laxity in the abdomen, thighs, arms, and buttocks.</p>
+        <div class="treatment-best-for">
+          <h4>Best For</h4>
+          <p>Loose skin after weight loss &middot; Postpartum laxity &middot; Cellulite &middot; Skin tightening without surgery</p>
+        </div>
+        <div class="treatment-offer">Intro Offers: $99 RF Tightening &middot; $199 Cryo + Sculptor Combo</div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+      <div class="treatment-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211014_47410037410.jpg"
+             alt="Sculptor vacuum RF skin tightening treatment"
+             loading="lazy" />
+      </div>
+    </div>
+
+    <!-- LIPOSONIX -->
+    <div class="treatment-block">
+      <div class="treatment-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202428358297_47410037410.jpg"
+             alt="Liposonix HIFU body contouring"
+             loading="lazy" />
+      </div>
+      <div class="treatment-copy">
+        <span class="service-tag-pill">Liposonix</span>
+        <h2>Next-level non-surgical<br>fat reduction.</h2>
+        <p class="treatment-tagline">High-Intensity Focused Ultrasound</p>
+        <p>Liposonix uses High-Intensity Focused Ultrasound to penetrate the deep fat layer beneath the skin and permanently destroy targeted fat cells. No incisions, no anesthesia, no interruption to your life. The body naturally eliminates the treated cells over the following weeks.</p>
+        <p>A powerful step up for clients seeking stronger fat reduction results.</p>
+        <div class="treatment-best-for">
+          <h4>Best For</h4>
+          <p>Moderate abdominal fat &middot; Clients wanting stronger results &middot; Those not ready for surgical liposuction</p>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+    </div>
+
+    <!-- EMS -->
+    <div class="treatment-block reverse">
+      <div class="treatment-copy">
+        <span class="service-tag-pill">EMS</span>
+        <h2>Build definition<br>while you relax.</h2>
+        <p class="treatment-tagline">Electrical Muscle Stimulation</p>
+        <p>EMS uses electrical impulses to deliver rapid, deep muscle contractions, engaging muscle fibers in ways that mimic an intense workout without you breaking a sweat. Use it to define your abdomen, lift and tone the glutes, or strengthen your core during postpartum recovery.</p>
+        <p>Best paired with Cryo or Liposonix for a complete body transformation protocol.</p>
+        <div class="treatment-best-for">
+          <h4>Best For</h4>
+          <p>Abdominal definition &middot; Glute lifting + toning &middot; Postpartum core recovery &middot; Enhancing fat-reduction results</p>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+      <div class="treatment-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202470295740_47410037410.jpg"
+             alt="EMS electrical muscle stimulation treatment"
+             loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SIGNATURE COMBO
+═══════════════════════════════════════════════════════════ -->
+<section id="combo" aria-label="Signature combo protocol">
+  <div class="container">
+    <div class="combo-inner">
+      <span class="section-label">Our Signature Combo Protocol</span>
+      <h2>Cryo + Sculptor: The Ultimate Sculpting Duo.</h2>
+      <p class="combo-desc">Cryo targets and breaks down fat. Sculptor tightens the skin and improves contour. Together, they address both fat reduction and skin laxity in a single protocol. It's our most requested body treatment for a reason.</p>
+      <div class="combo-offer-line">
+        <span class="combo-price">$199</span>
+        <span class="combo-price-label">Cryo + Sculptor Intro Offer</span>
+      </div>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book the Combo Now</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOW IT WORKS TOGETHER
+═══════════════════════════════════════════════════════════ -->
+<section id="how-it-works" aria-label="How it works together">
+  <div class="container">
+    <div class="how-header">
+      <span class="section-label">Your Transformation Plan</span>
+      <h2>Weight loss and body contouring, better together.</h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-num">01</span>
+        <h3>Lose the Weight</h3>
+        <p>Your Nurse Practitioner builds your personalized Semaglutide + Lipo Mino protocol and guides you through steady, meaningful weight loss. Science-backed. Personally tailored. Medically supervised every step of the way.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">02</span>
+        <h3>Sculpt the Body</h3>
+        <p>As the weight comes off, our body contouring team works alongside you. Using Cryo, Sculptor, Liposonix, and EMS to target stubborn areas and tighten skin as you transform. We don't just watch the scale. We sculpt the shape.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">03</span>
+        <h3>Catch Your Best Body</h3>
+        <p>The number on the scale changes. Then the mirror changes. Then everything changes. This is what real transformation looks like, and it starts with a single appointment at Catch.</p>
+      </div>
+    </div>
+
+    <div class="how-cta">
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Start Your Transformation</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════════════ -->
+<section id="final-cta" aria-label="Book your consultation">
+  <div class="final-cta-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="final-cta-inner">
+      <span class="section-label">It Starts With One Appointment</span>
+      <h2>You've been putting in the work. Let us help you catch the results.</h2>
+      <p>Whether you're just beginning your weight loss journey or looking to refine and sculpt what you've already achieved, Catch has a complete, customized program waiting for you. Book a consultation with our Nurse Practitioner today and let's build your plan together.</p>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Consultation</a>
+      <a href="about.html" class="final-cta-secondary">Questions? Contact us &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+        </div>
+        <p class="footer-tagline">The Ultimate Anti-Aging Experience</p>
+        <p class="footer-location">Spring Hill, TN · Nashville Area</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram @catch.nash">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.35)"/></svg>
+          </a>
+          <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Spa &amp; Skin</h4>
+        <ul>
+          <li><a href="spa.html">HydraFacial</a></li>
+          <li><a href="spa.html">RF Microneedling</a></li>
+          <li><a href="spa.html">CO2 Laser</a></li>
+          <li><a href="spa.html">MOXI Laser</a></li>
+          <li><a href="spa.html">Chemical Peels</a></li>
+          <li><a href="spa.html">IPL Photofacial</a></li>
+          <li><a href="spa.html" class="highlight">All Spa Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Body Contouring</h4>
+        <ul>
+          <li><a href="weight-loss.html">Cryo T-Shock</a></li>
+          <li><a href="weight-loss.html">Sculptor (RF)</a></li>
+          <li><a href="weight-loss.html">Liposonix</a></li>
+          <li><a href="weight-loss.html">EMS</a></li>
+          <li><a href="weight-loss.html">Combination Packages</a></li>
+          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Salon</h4>
+        <ul>
+          <li><a href="salon.html">Haircuts</a></li>
+          <li><a href="salon.html">Color &amp; Balayage</a></li>
+          <li><a href="salon.html">Blowouts &amp; Styling</a></li>
+          <li><a href="salon.html" class="highlight">All Salon Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Catch Salon and Spa · Spring Hill, TN · All Rights Reserved</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cancellation Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════════ -->
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Hero zoom on load
+  window.addEventListener('load', () => {
+    document.getElementById('hero').classList.add('loaded');
+  });
+
+  // Mobile nav toggle
+  function toggleMenu(btn) {
+    const mobile = document.getElementById('mobileNav');
+    const isOpen = mobile.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    const spans = btn.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  }
+
+  document.querySelectorAll('.nav-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+      const btn = document.querySelector('.nav-hamburger');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.step-card, .sema-benefit, .lipo-benefit-item, .treatment-block, .treatment-best-for');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+  fadeEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity 0.5s ease ${(i % 3) * 0.1}s, transform 0.5s ease ${(i % 3) * 0.1}s`;
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

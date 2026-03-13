@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Catch Salon & Spa | Spring Hill, TN</title>
+  <meta name="description" content="Meet the team behind Catch Salon & Spa in Spring Hill, TN. Founded by Andrea Harbison, our boutique destination brings together luxury hair, advanced skin treatments, and body contouring." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --cream:    #FAFAF7;
+      --ivory:    #F5F0E8;
+      --charcoal: #1C1C1C;
+      --espresso: #2B2220;
+      --blush:    #C9A49A;
+      --taupe:    #B5A89A;
+      --gold:     #C8A97E;
+      --white:    #FFFFFF;
+
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-sans:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+      --max-w: 1180px;
+      --section-pad: 100px;
+    }
+
+    body {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(44px, 6vw, 74px);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+    }
+    h2 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #3D3D3D;
+    }
+
+    /* ─── SECTION LABEL ────────────────────────────────────────── */
+    .section-label {
+      display: block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 18px;
+    }
+
+    /* ─── DIVIDER ──────────────────────────────────────────────── */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--blush);
+      margin: 24px auto;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+      border-radius: 2px;
+    }
+    .btn:hover { background: var(--charcoal); color: var(--white); }
+
+    .btn-dark { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+    .btn-dark:hover { background: var(--espresso); border-color: var(--espresso); color: var(--white); }
+
+    .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-gold:hover { background: #b8996e; border-color: #b8996e; color: var(--white); }
+
+    .btn-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.65); }
+    .btn-white:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       NAV — LIQUID GLASS
+    ═══════════════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(250, 250, 247, 0.55);
+      backdrop-filter: blur(28px) saturate(1.7);
+      -webkit-backdrop-filter: blur(28px) saturate(1.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 1px 0 rgba(0, 0, 0, 0.04),
+        0 4px 24px rgba(0, 0, 0, 0.05);
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    #nav.scrolled {
+      background: rgba(250, 250, 247, 0.75);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        0 2px 32px rgba(0, 0, 0, 0.08);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 76px;
+    }
+    .nav-logo img { height: 34px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      position: relative;
+      padding-bottom: 3px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--blush);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+
+    .nav-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-social { display: flex; gap: 14px; align-items: center; }
+    .nav-social a svg {
+      width: 17px; height: 17px;
+      stroke: var(--taupe); fill: none;
+      transition: stroke 0.2s;
+    }
+    .nav-social a:hover svg { stroke: var(--charcoal); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--charcoal);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: rgba(250, 250, 247, 0.95);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(181,168,154,0.2);
+      padding: 24px 40px 32px;
+      gap: 20px;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       PAGE HERO — SPLIT
+    ═══════════════════════════════════════════════════════════ */
+    #about-hero {
+      min-height: 100vh;
+      padding-top: 76px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-hero-left {
+      background: var(--espresso);
+      display: flex;
+      align-items: center;
+      padding: 60px 72px;
+      position: relative;
+    }
+    .about-hero-left::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 1px;
+      height: 100%;
+      background: rgba(255,255,255,0.06);
+    }
+    .about-hero-copy {
+      max-width: 440px;
+    }
+    .about-hero-copy .section-label {
+      color: rgba(255,255,255,0.5);
+    }
+    .about-hero-copy h1 {
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .about-hero-copy .hero-sub {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 44px;
+    }
+    .about-hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .about-hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(43,34,32,0.25), transparent);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       BRAND STORY
+    ═══════════════════════════════════════════════════════════ */
+    #story {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .story-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .story-inner h2 {
+      margin-bottom: 32px;
+    }
+    .story-inner p {
+      margin-bottom: 20px;
+      color: #4a4a4a;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+    .story-inner p:last-of-type { margin-bottom: 0; }
+    .story-pull {
+      font-family: var(--ff-display);
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin: 44px 0;
+      line-height: 1.5;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       TEAM SECTION
+    ═══════════════════════════════════════════════════════════ */
+    #team {
+      background: var(--ivory);
+      padding: var(--section-pad) 0;
+    }
+    .team-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 80px;
+    }
+    .team-header h2 { margin-bottom: 16px; }
+
+    .team-member {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+      padding: 72px 0;
+      border-top: 1px solid rgba(181,168,154,0.25);
+    }
+    .team-member:first-of-type { border-top: none; padding-top: 0; }
+    .team-member.flip { direction: rtl; }
+    .team-member.flip > * { direction: ltr; }
+
+    .team-photo {
+      position: relative;
+    }
+    .team-photo img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 2px;
+    }
+    .team-photo-accent {
+      position: absolute;
+      bottom: 28px;
+      right: -20px;
+      width: 72px;
+      height: 72px;
+      border: 1px solid rgba(200,169,126,0.4);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+    .team-member.flip .team-photo-accent {
+      right: auto;
+      left: -20px;
+    }
+
+    .team-bio {}
+    .team-role {
+      font-family: var(--ff-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .team-bio h3 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(30px, 3.5vw, 42px);
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+    }
+    .team-bio p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #4a4a4a;
+      margin-bottom: 18px;
+    }
+    .team-bio p:last-of-type { margin-bottom: 0; }
+
+    .team-specialties {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(181,168,154,0.3);
+    }
+    .specialties-label {
+      font-family: var(--ff-sans);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .specialties-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .specialty-tag {
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: #5a5a5a;
+      border: 1px solid rgba(181,168,154,0.5);
+      padding: 5px 14px;
+      border-radius: 2px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       VALUES SECTION
+    ═══════════════════════════════════════════════════════════ */
+    #about-values {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .about-values-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 72px;
+    }
+    .about-values-header h2 { margin-bottom: 20px; }
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(181,168,154,0.2);
+    }
+    .about-value-card {
+      background: var(--cream);
+      padding: 52px 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .about-value-icon {
+      width: 44px; height: 44px;
+      margin-bottom: 28px;
+    }
+    .about-value-icon svg {
+      width: 44px; height: 44px;
+      stroke: var(--blush); fill: none;
+      stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .about-value-card h3 {
+      font-family: var(--ff-sans);
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      color: var(--charcoal);
+    }
+    .about-value-card p { font-size: 15px; line-height: 1.8; color: #5a5a5a; }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       CLOSING CTA
+    ═══════════════════════════════════════════════════════════ */
+    #about-cta {
+      background: var(--espresso);
+      padding: var(--section-pad) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-cta-texture {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1762605584_3761330714777130148_47410037410.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.07;
+    }
+    .about-cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .about-cta-inner .section-label { color: var(--blush); margin-bottom: 20px; }
+    .about-cta-inner h2 {
+      color: var(--white);
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 24px;
+    }
+    .about-cta-inner p {
+      color: rgba(255,255,255,0.6);
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 44px;
+    }
+    .about-cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .about-cta-secondary {
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .about-cta-secondary:hover { color: rgba(255,255,255,0.85); }
+    .about-cta-secondary svg {
+      width: 13px; height: 13px;
+      stroke: currentColor; fill: none; stroke-width: 1.5;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--espresso);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 80px 0 40px;
+      color: rgba(255,255,255,0.55);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 26px; width: auto; filter: invert(1) brightness(0.8); }
+    .footer-tagline {
+      font-family: var(--ff-display);
+      font-size: 14px; font-style: italic;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 8px;
+    }
+    .footer-location { font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; }
+    .footer-social { display: flex; gap: 14px; margin-top: 24px; }
+    .footer-social a svg { width: 18px; height: 18px; stroke: rgba(255,255,255,0.35); fill: none; transition: stroke 0.2s; }
+    .footer-social a:hover svg { stroke: rgba(255,255,255,0.8); }
+    .footer-col h4 {
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
+    .footer-col ul li a.highlight { color: var(--gold); }
+    .footer-col ul li a.highlight:hover { color: #d4ba8e; }
+    .footer-bottom {
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.5); }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      #about-hero { grid-template-columns: 1fr; min-height: auto; }
+      .about-hero-left {
+        padding: 60px 48px;
+        min-height: 70vh;
+      }
+      .about-hero-right { height: 520px; }
+      .team-member { grid-template-columns: 1fr; gap: 48px; }
+      .team-member.flip { direction: ltr; }
+      .team-photo img { height: 420px; }
+      .team-photo-accent { display: none; }
+      .about-values-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px; }
+      .container { padding: 0 24px; }
+      .nav-inner { grid-template-columns: auto 1fr auto; padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-right .btn { display: none; }
+      .about-hero-left { padding: 120px 24px 64px; }
+      .about-value-card { padding: 36px 28px; }
+      .about-cta-buttons { flex-direction: column; gap: 20px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-legal { flex-wrap: wrap; justify-content: center; }
+      .nav-mobile { padding: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .team-photo img { height: 340px; }
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Catch Salon & Spa">
+      <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="salon.html">Salon</a></li>
+      <li><a href="weight-loss.html">Weight Loss</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-mobile" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="spa.html">Spa</a>
+    <a href="salon.html">Salon</a>
+    <a href="weight-loss.html">Weight Loss</a>
+    <a href="about.html">About Us</a>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="about-hero" aria-label="About Catch Salon and Spa">
+  <div class="about-hero-left">
+    <div class="about-hero-copy">
+      <span class="section-label">Our Story</span>
+      <h1>Built for Women Who Deserve More.</h1>
+      <p class="hero-sub">Catch Salon &amp; Spa was born from a simple belief: that every woman in Spring Hill deserves access to luxury treatments, real results, and a team that genuinely cares about her.</p>
+      <a href="#team" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Meet Our Team</a>
+    </div>
+  </div>
+  <div class="about-hero-right">
+    <img src="brand_assets/photos/andrea.jpg" alt="Andrea Harbison, founder of Catch Salon and Spa" />
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BRAND STORY
+═══════════════════════════════════════════════════════════ -->
+<section id="story" aria-label="Our story">
+  <div class="container">
+    <div class="story-inner">
+      <span class="section-label">Who We Are</span>
+      <h2>This isn't just a salon. It's a sanctuary.</h2>
+      <div class="divider"></div>
+
+      <p>Catch Salon &amp; Spa was founded by Andrea Harbison with one vision: to create a space where luxury and innovation live side by side. A place where you can come in feeling exhausted, self-conscious, or simply ready for a change, and leave feeling like the most confident version of yourself.</p>
+
+      <p class="story-pull">We are not a volume salon. We are not a cookie-cutter med spa. We are a boutique destination where every treatment is personalized, every detail is intentional, and every client leaves with a plan.</p>
+
+      <p>We're nestled in Spring Hill, TN, but our clients come from all across the Nashville area. They're drawn by the results, the experience, and a team that treats every single person who walks through our door like a priority.</p>
+
+      <p>From advanced laser treatments and body contouring to luxury facials and precision hair color, Catch brings together the full spectrum of beauty and wellness under one beautifully designed roof.</p>
+
+      <p>This is where you come to catch the best version of yourself.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     MEET THE TEAM
+═══════════════════════════════════════════════════════════ -->
+<section id="team" aria-label="Meet the team">
+  <div class="container">
+
+    <div class="team-header">
+      <span class="section-label">The Catch Team</span>
+      <h2>The people behind your transformation.</h2>
+    </div>
+
+    <!-- ANDREA -->
+    <div class="team-member">
+      <div class="team-photo">
+        <img src="brand_assets/photos/andrea.jpg" alt="Andrea Harbison, Founder and Owner" loading="lazy" />
+        <div class="team-photo-accent"></div>
+      </div>
+      <div class="team-bio">
+        <span class="team-role">Founder · Owner · Stylist</span>
+        <h3>Andrea Harbison</h3>
+        <p>Andrea Harbison is the visionary behind Catch Salon &amp; Spa. The experience feels the way it does from the moment you walk in because of her.</p>
+        <p>With over a decade of experience in the beauty industry, Andrea has built Catch from the ground up as Spring Hill's premier destination for luxury hair, skin, and body treatments. Her eye for detail, her passion for artistry, and her relentless commitment to excellence are woven into every corner of the Catch experience: from the treatment menu to the way the space looks and feels.</p>
+        <p>Andrea believes that beauty services should do more than make you look good. They should make you feel seen, cared for, and genuinely transformed. That philosophy shapes everything Catch does.</p>
+        <p>When she's not behind the chair or building the next chapter of Catch, you'll find her chasing inspiration and setting a standard that Spring Hill hasn't seen before.</p>
+        <div class="team-specialties">
+          <span class="specialties-label">Specialties</span>
+          <div class="specialties-tags">
+            <span class="specialty-tag">Hair Color</span>
+            <span class="specialty-tag">Precision Cuts</span>
+            <span class="specialty-tag">Balayage</span>
+            <span class="specialty-tag">Creative Styling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEGAN -->
+    <div class="team-member flip">
+      <div class="team-photo">
+        <img src="brand_assets/photos/megan.jpg" alt="Megan, Licensed Esthetician and Skin Specialist" loading="lazy" />
+        <div class="team-photo-accent"></div>
+      </div>
+      <div class="team-bio">
+        <span class="team-role">Licensed Esthetician · Skin Specialist</span>
+        <h3>Megan</h3>
+        <p>Megan brings over a decade of hands-on aesthetics experience to the Catch team, along with licenses in California, Texas, and Tennessee that reflect just how seriously she takes her craft.</p>
+        <p>Since earning her esthetics license in 2013, Megan has developed a reputation for delivering treatments that combine advanced technique with genuine warmth. She specializes in customized facials and body contouring services, with a philosophy rooted in both immediate results and long-term skin health. Her clients don't just leave glowing. They leave with a plan.</p>
+        <p>What sets Megan apart is the way she makes every guest feel: informed, comfortable, and completely confident that their skin is in the right hands. Whether she's performing RF Microneedling, body contouring, or a deeply customized facial, her approach is always personal, always precise, and always results-driven.</p>
+        <div class="team-specialties">
+          <span class="specialties-label">Specialties</span>
+          <div class="specialties-tags">
+            <span class="specialty-tag">Customized Facials</span>
+            <span class="specialty-tag">Advanced Body Contouring</span>
+            <span class="specialty-tag">RF Microneedling</span>
+            <span class="specialty-tag">Long-term Skin Planning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AMANDA -->
+    <div class="team-member">
+      <div class="team-photo">
+        <img src="brand_assets/photos/amanda.jpg" alt="Amanda, Stylist" loading="lazy" />
+        <div class="team-photo-accent"></div>
+      </div>
+      <div class="team-bio">
+        <span class="team-role">Stylist</span>
+        <h3>Amanda</h3>
+        <p>Amanda arrived in Tennessee by way of Texas, bringing with her over 10 years of hair expertise and a genuine love for the transformation that happens in the salon chair.</p>
+        <p>Color is her true passion. Amanda has a gift for reading what a client really wants, even when they're not quite sure how to say it, and translating that into a result that feels exactly right. Whether you're ready for a bold reinvention or a subtle, sun-kissed refresh, Amanda approaches every appointment with the same care and creative energy.</p>
+        <p>Her clients keep coming back not just for the hair, but for the experience of being in her chair.</p>
+        <div class="team-specialties">
+          <span class="specialties-label">Specialties</span>
+          <div class="specialties-tags">
+            <span class="specialty-tag">Hair Color</span>
+            <span class="specialty-tag">Balayage</span>
+            <span class="specialty-tag">Highlights</span>
+            <span class="specialty-tag">Creative Color Transformations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BAILEY -->
+    <div class="team-member flip">
+      <div class="team-photo">
+        <img src="brand_assets/photos/Bailey.jpg" alt="Bailey Rohdert, Esthetician" loading="lazy" />
+        <div class="team-photo-accent"></div>
+      </div>
+      <div class="team-bio">
+        <span class="team-role">Esthetician</span>
+        <h3>Bailey Rohdert</h3>
+        <p>If your skin has been waiting for its moment, Bailey is who you want in your corner. As one of Catch's talented estheticians, Bailey brings a gentle, intuitive touch to every facial, from deeply relaxing exfoliation to next-level hydration treatments that leave you visibly glowing long after you leave the treatment room.</p>
+        <p>Her clients are loyal for a reason. Bailey takes the time to understand your skin, makes personalized recommendations, and delivers results that genuinely surprise people, especially first-timers. One session and you'll understand why her books stay full.</p>
+        <p>Your skin deserves this. You'll thank her later.</p>
+        <div class="team-specialties">
+          <span class="specialties-label">Specialties</span>
+          <div class="specialties-tags">
+            <span class="specialty-tag">Custom Facials</span>
+            <span class="specialty-tag">Exfoliation</span>
+            <span class="specialty-tag">Hydration Treatments</span>
+            <span class="specialty-tag">Brow Services</span>
+            <span class="specialty-tag">Skin Consultations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     VALUES
+═══════════════════════════════════════════════════════════ -->
+<section id="about-values" aria-label="What drives us">
+  <div class="container">
+    <div class="about-values-header">
+      <span class="section-label">What Drives Us</span>
+      <h2>The Catch difference isn't one thing. It's everything.</h2>
+    </div>
+
+    <div class="about-values-grid">
+
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="16"/>
+            <polyline points="14,22 20,28 30,16"/>
+          </svg>
+        </div>
+        <h3>Results You Can See</h3>
+        <p>We invest in the most advanced technology available because surface-level treatments aren't enough. Every service at Catch is chosen to deliver real, measurable transformation, not just a relaxing hour.</p>
+      </div>
+
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg viewBox="0 0 44 44">
+            <path d="M22 6C22 6 10 14 10 24C10 32 16 38 22 38C28 38 34 32 34 24C34 14 22 6 22 6Z"/>
+            <line x1="22" y1="38" x2="22" y2="44"/>
+            <line x1="16" y1="44" x2="28" y2="44"/>
+          </svg>
+        </div>
+        <h3>An Experience Worth Returning To</h3>
+        <p>From the moment you book to the moment you leave, every interaction is designed to feel elevated, personal, and unhurried. This is what luxury actually feels like.</p>
+      </div>
+
+      <div class="about-value-card">
+        <div class="about-value-icon">
+          <svg viewBox="0 0 44 44">
+            <circle cx="22" cy="18" r="8"/>
+            <path d="M8 38C8 30 14 24 22 24C30 24 36 30 36 38"/>
+          </svg>
+        </div>
+        <h3>A Community, Not a Clientele</h3>
+        <p>Spring Hill is our home. Our clients are our neighbors, our friends, and the women we see at school pick-up and Sunday morning. We take that personally, and we show up for them accordingly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CLOSING CTA
+═══════════════════════════════════════════════════════════ -->
+<section id="about-cta" aria-label="Book your experience">
+  <div class="about-cta-texture" aria-hidden="true"></div>
+  <div class="container">
+    <div class="about-cta-inner">
+      <span class="section-label">Come See What We've Built</span>
+      <h2>Come see what we've built for you.</h2>
+      <p>We'd love to meet you. Whether you're ready to book or just want to explore what's possible, our team is here with zero pressure and a genuine desire to help you catch exactly what you're looking for.</p>
+      <div class="about-cta-buttons">
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Experience</a>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="about-cta-secondary">
+          Have questions? Contact us
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+        </div>
+        <p class="footer-tagline">The Ultimate Anti-Aging Experience</p>
+        <p class="footer-location">Spring Hill, TN · Nashville Area</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram @catch.nash">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.35)"/></svg>
+          </a>
+          <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Spa &amp; Skin</h4>
+        <ul>
+          <li><a href="spa.html">HydraFacial</a></li>
+          <li><a href="spa.html">RF Microneedling</a></li>
+          <li><a href="spa.html">CO2 Laser</a></li>
+          <li><a href="spa.html">MOXI Laser</a></li>
+          <li><a href="spa.html">Chemical Peels</a></li>
+          <li><a href="spa.html">IPL Photofacial</a></li>
+          <li><a href="spa.html" class="highlight">All Spa Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Body Contouring</h4>
+        <ul>
+          <li><a href="weight-loss.html">Cryo T-Shock</a></li>
+          <li><a href="weight-loss.html">Sculptor (RF)</a></li>
+          <li><a href="weight-loss.html">Liposonix</a></li>
+          <li><a href="weight-loss.html">EMS</a></li>
+          <li><a href="weight-loss.html">Combination Packages</a></li>
+          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Salon</h4>
+        <ul>
+          <li><a href="salon.html">Haircuts</a></li>
+          <li><a href="salon.html">Color &amp; Balayage</a></li>
+          <li><a href="salon.html">Blowouts &amp; Styling</a></li>
+          <li><a href="salon.html" class="highlight">All Salon Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Catch Salon and Spa · Spring Hill, TN · All Rights Reserved</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cancellation Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════════ -->
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Mobile nav toggle
+  function toggleMenu(btn) {
+    const mobile = document.getElementById('mobileNav');
+    const isOpen = mobile.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    const spans = btn.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  }
+
+  document.querySelectorAll('.nav-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+      const btn = document.querySelector('.nav-hamburger');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.team-member, .about-value-card, .team-specialties');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+
+  fadeEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = `opacity 0.6s ease ${(i % 2) * 0.1}s, transform 0.6s ease ${(i % 2) * 0.1}s`;
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

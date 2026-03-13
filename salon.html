@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon Services | Catch Salon &amp; Spa | Spring Hill, TN</title>
+  <meta name="description" content="Expert hair cuts, color, balayage, keratin treatments, and extensions in Spring Hill, TN. Book with Catch Salon &amp; Spa." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --cream:    #FAFAF7;
+      --ivory:    #F5F0E8;
+      --charcoal: #1C1C1C;
+      --espresso: #2B2220;
+      --blush:    #C9A49A;
+      --taupe:    #B5A89A;
+      --gold:     #C8A97E;
+      --white:    #FFFFFF;
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-sans:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+      --max-w: 1180px;
+      --section-pad: 100px;
+    }
+
+    body {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    h1 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(44px, 6vw, 74px);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+    }
+    h2 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #3D3D3D;
+    }
+
+    .section-label {
+      display: block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 18px;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--blush);
+      margin: 24px auto;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+      border-radius: 2px;
+    }
+    .btn:hover { background: var(--charcoal); color: var(--white); }
+    .btn-dark { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+    .btn-dark:hover { background: var(--espresso); border-color: var(--espresso); color: var(--white); }
+    .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-gold:hover { background: #b8996e; border-color: #b8996e; color: var(--white); }
+    .btn-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.65); }
+    .btn-white:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+
+
+    /* ═══ NAV ═══════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(250, 250, 247, 0.55);
+      backdrop-filter: blur(28px) saturate(1.7);
+      -webkit-backdrop-filter: blur(28px) saturate(1.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 1px 0 rgba(0, 0, 0, 0.04),
+        0 4px 24px rgba(0, 0, 0, 0.05);
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    #nav.scrolled {
+      background: rgba(250, 250, 247, 0.75);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        0 2px 32px rgba(0, 0, 0, 0.08);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 76px;
+    }
+    .nav-logo img { height: 34px; width: auto; }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      position: relative;
+      padding-bottom: 3px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--blush);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+    .nav-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-social { display: flex; gap: 14px; align-items: center; }
+    .nav-social a svg {
+      width: 17px; height: 17px;
+      stroke: var(--taupe); fill: none;
+      transition: stroke 0.2s;
+    }
+    .nav-social a:hover svg { stroke: var(--charcoal); }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--charcoal);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: rgba(250, 250, 247, 0.95);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(181,168,154,0.2);
+      padding: 24px 40px 32px;
+      gap: 20px;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+    }
+
+
+    /* ═══ HERO ═══════════════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      padding-top: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1772721015_3846185069274264869_47410037410.jpg');
+      background-size: cover;
+      background-position: center center;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+    #hero.loaded .hero-bg { transform: scale(1); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: rgba(20, 18, 16, 0.74);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-content .section-label {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+    }
+    .hero-content h1 {
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .hero-content .hero-sub {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      max-width: 580px;
+      margin: 0 auto 40px;
+    }
+
+
+    /* ═══ INTRO ══════════════════════════════════════════════════ */
+    #intro {
+      background: var(--white);
+      padding: var(--section-pad) 0;
+    }
+    .intro-inner {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .intro-inner h2 { margin-bottom: 28px; }
+    .intro-inner p {
+      margin-bottom: 20px;
+      color: #5a5a5a;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+    .intro-inner p:last-of-type { margin-bottom: 0; }
+    .intro-cta { margin-top: 44px; }
+
+
+    /* ═══ SERVICES HEADER ════════════════════════════════════════ */
+    .services-page-header {
+      text-align: center;
+      padding: var(--section-pad) 0;
+      background: var(--ivory);
+    }
+    .services-page-header .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .services-page-header h2 {
+      max-width: 640px;
+      margin: 12px auto 0;
+      text-align: center;
+    }
+
+
+    /* ═══ SERVICE FEATURE BLOCKS ═════════════════════════════════ */
+    .svc-block { padding: var(--section-pad) 0; }
+    .svc-block:nth-child(odd)  { background: var(--cream); }
+    .svc-block:nth-child(even) { background: var(--ivory); }
+
+    .svc-block-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .svc-block-inner.img-left { }
+    .svc-block-inner.img-right .svc-image { order: 2; }
+    .svc-block-inner.img-right .svc-meta  { order: 1; }
+
+    .svc-image img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 2px;
+    }
+
+    .svc-pill {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--gold);
+      padding: 5px 14px;
+      margin-bottom: 16px;
+      border-radius: 2px;
+    }
+    .svc-meta h2 {
+      font-size: clamp(28px, 3.5vw, 40px);
+      margin-bottom: 10px;
+    }
+    .svc-tagline {
+      font-family: var(--ff-display);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--taupe);
+      margin-bottom: 24px;
+    }
+    .svc-meta p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #5a5a5a;
+      margin-bottom: 18px;
+    }
+    .svc-meta p:last-of-type { margin-bottom: 0; }
+
+    .svc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0 24px;
+    }
+    .svc-tag {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: #5a5a5a;
+      border: 1px solid rgba(181,168,154,0.5);
+      padding: 5px 13px;
+      border-radius: 2px;
+    }
+    .svc-best {
+      font-size: 13px;
+      color: var(--taupe);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .svc-best strong {
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+    .svc-meta .btn { margin-top: 8px; }
+
+
+    /* ═══ SERVICE CARD GRID ══════════════════════════════════════ */
+    .svc-cards-section {
+      padding: var(--section-pad) 0;
+      background: var(--cream);
+      border-top: 1px solid rgba(181,168,154,0.2);
+    }
+    .svc-cards-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .svc-cards-header h2 { margin-bottom: 12px; }
+    .svc-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(181,168,154,0.2);
+    }
+    .svc-card {
+      background: var(--ivory);
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    .svc-card-num {
+      font-family: var(--ff-display);
+      font-size: 60px;
+      font-weight: 300;
+      color: rgba(201,164,154,0.2);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .svc-card h3 {
+      font-family: var(--ff-sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .svc-card .card-tagline {
+      font-family: var(--ff-display);
+      font-size: 17px;
+      font-style: italic;
+      color: var(--taupe);
+      margin-bottom: 20px;
+    }
+    .svc-card p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: #5a5a5a;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .svc-card .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .card-tag {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #6a6a6a;
+      border: 1px solid rgba(181,168,154,0.45);
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    .svc-card .card-best {
+      font-size: 12px;
+      color: var(--taupe);
+      margin-bottom: 24px;
+      line-height: 1.65;
+    }
+    .svc-card .card-best strong {
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+    .card-cta {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      border-bottom: 1px solid rgba(28,28,28,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+      align-self: flex-start;
+      margin-top: auto;
+    }
+    .card-cta:hover { color: var(--blush); border-color: var(--blush); }
+
+
+    /* ═══ TESTIMONIALS ═══════════════════════════════════════════ */
+    #testimonials {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .testimonials-header {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 64px;
+    }
+    .reviews-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .stars { display: flex; gap: 3px; }
+    .stars svg { width: 14px; height: 14px; fill: var(--gold); }
+    .reviews-count { font-size: 13px; color: var(--taupe); letter-spacing: 0.06em; }
+
+    .testimonials-top {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .testimonials-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 820px;
+      margin: 0 auto 52px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      padding: 36px 32px;
+      border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-stars { display: flex; gap: 3px; margin-bottom: 20px; }
+    .card-stars svg { width: 13px; height: 13px; fill: var(--gold); }
+    .testimonial-card blockquote {
+      font-family: var(--ff-display);
+      font-size: 17px;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--charcoal);
+      flex: 1;
+      margin-bottom: 24px;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(201,164,154,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500;
+      color: var(--blush);
+      flex-shrink: 0;
+    }
+    .author-name { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; color: var(--charcoal); }
+    .author-source { font-size: 11px; color: var(--taupe); }
+
+
+    /* ═══ BOOKING ════════════════════════════════════════════════ */
+    #book {
+      background: var(--ivory);
+      padding: var(--section-pad) 0;
+    }
+    .book-inner {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .book-inner h2 { margin-bottom: 24px; }
+    .book-inner p { color: #5a5a5a; margin-bottom: 18px; font-size: 16px; line-height: 1.85; }
+    .book-ctas {
+      margin-top: 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .book-secondary {
+      font-size: 13px;
+      color: var(--taupe);
+      letter-spacing: 0.04em;
+    }
+    .book-secondary a { color: var(--blush); transition: color 0.2s; }
+    .book-secondary a:hover { color: var(--charcoal); }
+
+
+    /* ═══ FINAL CTA ══════════════════════════════════════════════ */
+    #final-cta {
+      position: relative;
+      padding: var(--section-pad) 0;
+      text-align: center;
+      overflow: hidden;
+      background: var(--espresso);
+    }
+    .final-cta-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1766336935_3792631560819265416_47410037410.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.1;
+    }
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .final-cta-inner .section-label { color: var(--blush); margin-bottom: 20px; }
+    .final-cta-inner h2 {
+      color: var(--white);
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 24px;
+    }
+    .final-cta-inner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 44px;
+    }
+
+
+    /* ═══ FOOTER ════════════════════════════════════════════════ */
+    #footer {
+      background: var(--espresso);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 80px 0 40px;
+      color: rgba(255,255,255,0.55);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 26px; width: auto; filter: invert(1) brightness(0.8); }
+    .footer-tagline {
+      font-family: var(--ff-display);
+      font-size: 14px; font-style: italic;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 8px;
+    }
+    .footer-location { font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; }
+    .footer-social { display: flex; gap: 14px; margin-top: 24px; }
+    .footer-social a svg { width: 18px; height: 18px; stroke: rgba(255,255,255,0.35); fill: none; transition: stroke 0.2s; }
+    .footer-social a:hover svg { stroke: rgba(255,255,255,0.8); }
+    .footer-col h4 {
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
+    .footer-col ul li a.highlight { color: var(--gold); }
+    .footer-col ul li a.highlight:hover { color: #d4ba8e; }
+    .footer-bottom {
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.5); }
+
+
+    /* ═══ RESPONSIVE ════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .svc-block-inner { grid-template-columns: 1fr; gap: 40px; }
+      .svc-block-inner.img-right .svc-image { order: 0; }
+      .svc-block-inner.img-right .svc-meta  { order: 0; }
+      .svc-image img { height: 380px; }
+      .svc-cards-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-top { grid-template-columns: 1fr 1fr; }
+      .testimonials-bottom { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px; }
+      .container { padding: 0 24px; }
+      .nav-inner { grid-template-columns: auto 1fr auto; padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-right .btn { display: none; }
+      .svc-cards-grid { grid-template-columns: 1fr; }
+      .testimonials-top { grid-template-columns: 1fr; }
+      .testimonials-bottom { grid-template-columns: 1fr; max-width: 100%; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-legal { flex-wrap: wrap; justify-content: center; }
+      .nav-mobile { padding: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Catch Salon & Spa">
+      <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="spa.html">Spa</a></li>
+      <li><a href="salon.html" class="active">Salon</a></li>
+      <li><a href="weight-loss.html">Weight Loss</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-mobile" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="spa.html">Spa</a>
+    <a href="salon.html">Salon</a>
+    <a href="weight-loss.html">Weight Loss</a>
+    <a href="about.html">About Us</a>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="section-label">Luxury Hair Services</span>
+    <h1>Catch Your<br>Dream Hair.</h1>
+    <p class="hero-sub">Precision cuts, stunning color, and transformative treatments delivered by stylists who actually listen and execute exactly what you envision.</p>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Appointment</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     INTRO
+═══════════════════════════════════════════════════════════ -->
+<section id="intro" aria-label="Introduction">
+  <div class="container">
+    <div class="intro-inner">
+      <span class="section-label">The Catch Difference</span>
+      <h2>This is where great hair days become your new normal.</h2>
+      <div class="divider"></div>
+      <p>At Catch, the salon experience is everything the old way wasn't. No rushing through your consultation. No walking out with something you didn't ask for. Our stylists take the time to understand your hair, your lifestyle, and your vision and then they deliver it. Every single time.</p>
+      <p>Whether you're looking for a bold color transformation, a healthy trim that finally gets the shape right, or a full extension install that changes your whole look, you're in the hands of stylists who are serious about their craft and genuinely invested in your results.</p>
+      <p>Book online anytime through our Vagaro app. Full service menu and pricing are available at the link below.</p>
+      <div class="intro-cta">
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">View Services &amp; Book Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES HEADER
+═══════════════════════════════════════════════════════════ -->
+<div class="services-page-header" id="services">
+  <div class="container">
+    <span class="section-label">Our Salon Services</span>
+    <h2>Every service. One standard: exceptional.</h2>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE: CUSTOM COLOR
+═══════════════════════════════════════════════════════════ -->
+<section class="svc-block" aria-label="Custom Color">
+  <div class="container">
+    <div class="svc-block-inner img-right">
+      <div class="svc-meta">
+        <span class="svc-pill">Custom Color</span>
+        <h2>Custom Color</h2>
+        <p class="svc-tagline">Your color. Perfectly yours.</p>
+        <p>Great color isn't just about the formula. It's about the conversation that happens first. Our colorists are trained in advanced color theory, the latest techniques, and the kind of active listening that turns your Pinterest board into something even better in real life. We create a fully customized color formula for you and we make sure it works with your skin tone, your lifestyle, and how much time you actually want to spend styling every morning.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Full Color</span>
+          <span class="svc-tag">Balayage</span>
+          <span class="svc-tag">Color Correction</span>
+          <span class="svc-tag">Toning</span>
+          <span class="svc-tag">Glossing</span>
+          <span class="svc-tag">Grey Blending</span>
+        </div>
+        <p class="svc-best"><strong>Best for:</strong> Anyone ready to love their color again</p>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book Color</a>
+      </div>
+      <div class="svc-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403204848_47410037410.jpg"
+             alt="Custom hair color at Catch Salon"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE: HIGHLIGHTS
+═══════════════════════════════════════════════════════════ -->
+<section class="svc-block" aria-label="Highlights">
+  <div class="container">
+    <div class="svc-block-inner img-left">
+      <div class="svc-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211014_47410037410.jpg"
+             alt="Hair highlights at Catch Salon"
+             loading="lazy" />
+      </div>
+      <div class="svc-meta">
+        <span class="svc-pill">Highlights</span>
+        <h2>Highlights</h2>
+        <p class="svc-tagline">Dimension. Depth. Done right.</p>
+        <p>Highlights done well can completely transform how your hair moves, catches light, and frames your face. Our colorists stay current with evolving highlight techniques, from lived-in babylights to bold, high-contrast dimension, and apply them with the precision and artistry that makes the difference between highlights that look natural and ones that look painted on.</p>
+        <p class="svc-best"><strong>Best for:</strong> Adding brightness · Sun-kissed looks · Dimension without full color commitment</p>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book Highlights</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE: HAIRCUTS
+═══════════════════════════════════════════════════════════ -->
+<section class="svc-block" aria-label="Haircuts">
+  <div class="container">
+    <div class="svc-block-inner img-right">
+      <div class="svc-meta">
+        <span class="svc-pill">Haircuts</span>
+        <h2>Haircuts</h2>
+        <p class="svc-tagline">The right cut changes everything.</p>
+        <p>A truly great haircut is one that works with your texture, flatters your face shape, and still looks good on a day when you didn't try that hard. Our stylists approach every cut as a custom creation, not a template. They'll talk through your lifestyle, how you like to style, and what hasn't been working before a single snip is made.</p>
+        <p class="svc-best"><strong>Best for:</strong> All lengths and textures · First-time clients · Maintenance trims · Full transformations</p>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book a Cut</a>
+      </div>
+      <div class="svc-image">
+        <img src="brand_assets/photos/catch.nash_1766336935_3792631560819265416_47410037410.jpg"
+             alt="Haircut at Catch Salon"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE: EXTENSIONS (feature block)
+═══════════════════════════════════════════════════════════ -->
+<section class="svc-block" aria-label="Hair Extensions">
+  <div class="container">
+    <div class="svc-block-inner img-left">
+      <div class="svc-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202428358297_47410037410.jpg"
+             alt="Hair extensions at Catch Salon"
+             loading="lazy" />
+      </div>
+      <div class="svc-meta">
+        <span class="svc-pill">Hair Extensions</span>
+        <h2>Hair Extensions</h2>
+        <p class="svc-tagline">The length. The volume. The look you've always wanted.</p>
+        <p>We specialize in all major hair extension methods, so whatever your hair type, your goals, or your budget, we have a technique that works for you. Extensions done right should be undetectable, comfortable, and completely transformative. Our stylists are trained in application, blending, and maintenance, and will walk you through everything you need to know to keep your extensions looking their best.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Tape-In</span>
+          <span class="svc-tag">Hand-Tied</span>
+          <span class="svc-tag">Other methods available</span>
+        </div>
+        <p class="svc-best"><strong>Best for:</strong> Adding length · Volume and fullness · Special events · Long-term transformation</p>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book an Extensions Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE CARDS: KERATIN + BLOWOUTS
+═══════════════════════════════════════════════════════════ -->
+<section class="svc-cards-section" aria-label="Additional salon services">
+  <div class="container">
+    <div class="svc-cards-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="svc-card" style="background: var(--cream);">
+        <h3>Keratin Treatment</h3>
+        <p class="card-tagline">Frizz-free. Healthy. Half the styling time.</p>
+        <p>Our Keratin treatment uses KERABOND™ Technology to smooth the hair, reduce curl up to 95%, and leave your hair healthy, shiny, and completely manageable, with significantly fewer fumes than traditional keratin treatments. Results last up to three months, and most clients cut their daily styling time in half. If you've been fighting your hair every morning, this is the treatment that changes that.</p>
+        <p class="card-best"><strong>Best for:</strong> Frizzy or unruly hair · Curl reduction · Shine and manageability · Saving time</p>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="card-cta">Book Keratin</a>
+      </div>
+
+      <div class="svc-card" style="background: var(--ivory);">
+        <h3>Blowouts &amp; Styling</h3>
+        <p class="card-tagline">Walk in. Walk out glowing.</p>
+        <p>Sometimes you just need to feel put-together, and that's exactly what a blowout at Catch delivers. Whether it's for a special occasion, a Monday that needs to feel like a win, or a last-minute event you forgot to plan for, our stylists will give you a blowout that holds, moves beautifully, and makes you feel like your most confident self.</p>
+        <p class="card-best"><strong>Best for:</strong> Special occasions · Date nights · Pre-event prep · Everyday luxury</p>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="card-cta">Book a Blowout</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════════════════ -->
+<section id="testimonials" aria-label="Client testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <span class="section-label">What Our Clients Say</span>
+      <div class="reviews-meta">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <span class="reviews-count">266+ Five-Star Reviews on Google</span>
+      </div>
+      <h2>Real results. Real stylists. Real love for their craft.</h2>
+    </div>
+
+    <div class="testimonials-top">
+      <div class="testimonial-card">
+        <div class="card-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"I found my salon home! I always leave looking and feeling great. I've been going almost a year now for my cut and highlights and it's consistently a wonderful job. My hair is healthier than when I started going."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">E</div>
+          <div>
+            <div class="author-name">Evan S.</div>
+            <div class="author-source">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Andrea is absolutely amazing! She truly listens to what you want and brings it to life even better than you imagined. Every time I leave her chair, I feel refreshed, confident, and beautiful."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Amy G.</div>
+            <div class="author-source">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Amanda was amazing! My haircut was exactly what I requested and she took the time to educate me on ways to get my hair healthy again. I left feeling glamorous."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Annie V.</div>
+            <div class="author-source">Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-bottom">
+      <div class="testimonial-card">
+        <div class="card-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"I've been going to Andrea since 2011, and honestly, I don't trust anyone else with my hair. She just gets it! Whether I've wanted a big change or just a little refresh, she somehow makes it look even better than I pictured."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">H</div>
+          <div>
+            <div class="author-name">Heather L.</div>
+            <div class="author-source">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <blockquote>"Catch is the best salon in Williamson County. My wife started coming here years ago and now me and our son all get our hair done at Catch."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">B</div>
+          <div>
+            <div class="author-name">Brad S.</div>
+            <div class="author-source">Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://www.google.com/search?q=catch+salon+and+spa+spring+hill+tn+reviews" target="_blank" rel="noopener" class="btn">Read More Reviews</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOOKING
+═══════════════════════════════════════════════════════════ -->
+<section id="book" aria-label="Book an appointment">
+  <div class="container">
+    <div class="book-inner">
+      <span class="section-label">Book Your Visit</span>
+      <h2>Ready to catch your best hair yet?</h2>
+      <div class="divider"></div>
+      <p>Book online anytime through our Vagaro app. Full service menu and pricing are available at the link. Find your service, pick your stylist, and choose the time that works for you. It really is that easy.</p>
+      <div class="book-ctas">
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="font-size:11px; letter-spacing:0.18em;">Book Online Now</a>
+        <p class="book-secondary">Questions? Reach us at <a href="mailto:catchsalon.nash@gmail.com">catchsalon.nash@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════════════ -->
+<section id="final-cta" aria-label="Book your appointment">
+  <div class="final-cta-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="final-cta-inner">
+      <span class="section-label">One Appointment Away</span>
+      <h2>Your best hair day is one appointment away.</h2>
+      <p>Our stylists are ready to listen, advise, and deliver, whether you're coming in for the first time or you've been a Catch regular for years. We'd love to have you in the chair.</p>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Appointment</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+        </div>
+        <p class="footer-tagline">The Ultimate Anti-Aging Experience</p>
+        <p class="footer-location">Spring Hill, TN · Nashville Area</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram @catch.nash">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.35)"/></svg>
+          </a>
+          <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Spa &amp; Skin</h4>
+        <ul>
+          <li><a href="spa.html">HydraFacial</a></li>
+          <li><a href="spa.html">RF Microneedling</a></li>
+          <li><a href="spa.html">CO2 Laser</a></li>
+          <li><a href="spa.html">MOXI Laser</a></li>
+          <li><a href="spa.html">Chemical Peels</a></li>
+          <li><a href="spa.html">IPL Photofacial</a></li>
+          <li><a href="spa.html" class="highlight">All Spa Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Body Contouring</h4>
+        <ul>
+          <li><a href="weight-loss.html">Cryo T-Shock</a></li>
+          <li><a href="weight-loss.html">Sculptor (RF)</a></li>
+          <li><a href="weight-loss.html">Liposonix</a></li>
+          <li><a href="weight-loss.html">EMS</a></li>
+          <li><a href="weight-loss.html">Combination Packages</a></li>
+          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Salon</h4>
+        <ul>
+          <li><a href="salon.html">Haircuts</a></li>
+          <li><a href="salon.html">Color &amp; Balayage</a></li>
+          <li><a href="salon.html">Extensions</a></li>
+          <li><a href="salon.html">Keratin Treatment</a></li>
+          <li><a href="salon.html">Blowouts &amp; Styling</a></li>
+          <li><a href="salon.html" class="highlight">All Salon Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Catch Salon and Spa · Spring Hill, TN · All Rights Reserved</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cancellation Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════════ -->
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  window.addEventListener('load', () => {
+    document.getElementById('hero').classList.add('loaded');
+  });
+
+  function toggleMenu(btn) {
+    const mobile = document.getElementById('mobileNav');
+    const isOpen = mobile.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    const spans = btn.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  }
+
+  document.querySelectorAll('.nav-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+      const btn = document.querySelector('.nav-hamburger');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const fadeEls = document.querySelectorAll('.testimonial-card, .svc-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+  fadeEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity 0.5s ease ${(i % 3) * 0.1}s, transform 0.5s ease ${(i % 3) * 0.1}s`;
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

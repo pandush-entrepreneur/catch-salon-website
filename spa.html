@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spa Services | Catch Salon & Spa | Spring Hill, TN</title>
+  <meta name="description" content="Advanced spa treatments in Spring Hill, TN. HydraFacial, RF Microneedling, HIFU, CO2 Laser, IPL, LED Therapy, Cryotherapy Facial and more. Real results, no surgery." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --cream:    #FAFAF7;
+      --ivory:    #F5F0E8;
+      --charcoal: #1C1C1C;
+      --espresso: #2B2220;
+      --blush:    #C9A49A;
+      --taupe:    #B5A89A;
+      --gold:     #C8A97E;
+      --white:    #FFFFFF;
+
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-sans:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+      --max-w: 1180px;
+      --section-pad: 100px;
+    }
+
+    body {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(44px, 6vw, 74px);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+    }
+    h2 {
+      font-family: var(--ff-display);
+      font-weight: 300;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #3D3D3D;
+    }
+
+    /* ─── SECTION LABEL ────────────────────────────────────────── */
+    .section-label {
+      display: block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 18px;
+    }
+
+    /* ─── DIVIDER ──────────────────────────────────────────────── */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--blush);
+      margin: 24px auto;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--ff-sans);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+      border-radius: 2px;
+    }
+    .btn:hover { background: var(--charcoal); color: var(--white); }
+
+    .btn-dark { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+    .btn-dark:hover { background: var(--espresso); border-color: var(--espresso); color: var(--white); }
+
+    .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-gold:hover { background: #b8996e; border-color: #b8996e; color: var(--white); }
+
+    .btn-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.65); }
+    .btn-white:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+
+    .link-arrow {
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid rgba(200,169,126,0.4);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .link-arrow:hover { border-color: var(--gold); }
+    .link-arrow svg { width: 12px; height: 12px; stroke: var(--gold); fill: none; stroke-width: 2; }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       NAV — LIQUID GLASS
+    ═══════════════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(250, 250, 247, 0.55);
+      backdrop-filter: blur(28px) saturate(1.7);
+      -webkit-backdrop-filter: blur(28px) saturate(1.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 1px 0 rgba(0, 0, 0, 0.04),
+        0 4px 24px rgba(0, 0, 0, 0.05);
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    #nav.scrolled {
+      background: rgba(250, 250, 247, 0.75);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        0 2px 32px rgba(0, 0, 0, 0.08);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 76px;
+    }
+    .nav-logo img { height: 34px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: var(--ff-sans);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      position: relative;
+      padding-bottom: 3px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--blush);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+
+    .nav-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-social { display: flex; gap: 14px; align-items: center; }
+    .nav-social a svg {
+      width: 17px; height: 17px;
+      stroke: var(--taupe); fill: none;
+      transition: stroke 0.2s;
+    }
+    .nav-social a:hover svg { stroke: var(--charcoal); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--charcoal);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: rgba(250, 250, 247, 0.95);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(181,168,154,0.2);
+      padding: 24px 40px 32px;
+      gap: 20px;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      padding-top: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1764422605_3776572997402380965_47410037410.jpg');
+      background-size: cover;
+      background-position: center center;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+    #hero.loaded .hero-bg { transform: scale(1); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(20, 18, 16, 0.50) 0%,
+        rgba(20, 18, 16, 0.70) 60%,
+        rgba(20, 18, 16, 0.82) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 840px;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-content .section-label {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+    }
+    .hero-content h1 {
+      color: var(--white);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .hero-sub {
+      font-family: var(--ff-sans);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.82);
+      max-width: 600px;
+      margin: 0 auto 44px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       INTRO
+    ═══════════════════════════════════════════════════════════ */
+    #intro {
+      background: var(--white);
+      padding: var(--section-pad) 0;
+    }
+    .intro-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-inner h2 { margin-bottom: 28px; }
+    .intro-inner > p { font-size: 17px; line-height: 1.9; color: #4a4a4a; }
+    .intro-rule {
+      width: 1px;
+      height: 60px;
+      background: rgba(181,168,154,0.4);
+      margin: 52px auto 0;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       SERVICES SECTION HEADER
+    ═══════════════════════════════════════════════════════════ */
+    #services-header {
+      background: var(--ivory);
+      padding: var(--section-pad) 0 64px;
+      text-align: center;
+    }
+    #services-header h2 {
+      margin-top: 14px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       SERVICE BLOCKS
+    ═══════════════════════════════════════════════════════════ */
+    .service-block { padding: var(--section-pad) 0; }
+    .service-block:nth-child(odd)  { background: var(--cream); }
+    .service-block:nth-child(even) { background: var(--ivory); }
+
+    .service-block-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .service-pill {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--gold);
+      padding: 5px 14px;
+      margin-bottom: 16px;
+      border-radius: 2px;
+    }
+
+    .service-meta h2 {
+      font-size: clamp(26px, 3.2vw, 40px);
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+    .service-tagline {
+      font-family: var(--ff-display);
+      font-size: 19px;
+      font-style: italic;
+      color: var(--taupe);
+      margin-bottom: 22px;
+      display: block;
+    }
+    .service-body {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
+    .service-body:last-of-type { margin-bottom: 0; }
+
+    .best-for {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 22px 0 28px;
+      padding: 14px 18px;
+      background: rgba(201,164,154,0.08);
+      border-left: 3px solid var(--blush);
+      border-radius: 2px;
+    }
+    .best-for-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blush);
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+    .best-for-text {
+      font-size: 13px;
+      color: #5a5a5a;
+      line-height: 1.65;
+    }
+
+    .service-quote {
+      font-family: var(--ff-display);
+      font-size: 16px;
+      font-style: italic;
+      color: var(--charcoal);
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px;
+      margin: 20px 0 26px;
+      background: rgba(200,169,126,0.06);
+      line-height: 1.6;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 2px;
+    }
+
+    .service-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .services-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 20px 0 28px;
+    }
+    .services-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .services-list li::before {
+      content: '';
+      display: block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--blush);
+      flex-shrink: 0;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       TESTIMONIAL CALLOUT
+    ═══════════════════════════════════════════════════════════ */
+    #testimonial-callout {
+      background: var(--ivory);
+      padding: var(--section-pad) 0;
+    }
+    .callout-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .callout-stars {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+    .callout-stars svg { width: 16px; height: 16px; fill: var(--gold); }
+    .callout-open-quote {
+      font-family: var(--ff-display);
+      font-size: 100px;
+      font-weight: 300;
+      color: rgba(201,164,154,0.22);
+      line-height: 0.65;
+      display: block;
+      margin-bottom: 28px;
+    }
+    .callout-quote {
+      font-family: var(--ff-display);
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--charcoal);
+      margin-bottom: 32px;
+    }
+    .callout-attr {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       PHOTO GALLERY
+    ═══════════════════════════════════════════════════════════ */
+    #gallery {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+    }
+    .gallery-header {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 56px;
+    }
+    .gallery-header h2 { margin-top: 14px; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 2px;
+      background: var(--ivory);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item.tall img { height: 570px; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.wide img { height: 280px; }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       CLOSING CTA
+    ═══════════════════════════════════════════════════════════ */
+    #closing-cta {
+      position: relative;
+      padding: var(--section-pad) 0;
+      text-align: center;
+      overflow: hidden;
+      background: var(--espresso);
+    }
+    .closing-bg {
+      position: absolute; inset: 0;
+      background-image: url('brand_assets/photos/catch.nash_1763512907_3768941896568421194_47410037410.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.12;
+    }
+    .closing-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .closing-inner .section-label { color: var(--blush); margin-bottom: 20px; }
+    .closing-inner h2 {
+      color: var(--white);
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 24px;
+    }
+    .closing-inner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 44px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--espresso);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 80px 0 40px;
+      color: rgba(255,255,255,0.55);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 26px; width: auto; filter: invert(1) brightness(0.8); }
+    .footer-tagline {
+      font-family: var(--ff-display);
+      font-size: 14px; font-style: italic;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 8px;
+    }
+    .footer-location { font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; }
+    .footer-social { display: flex; gap: 14px; margin-top: 24px; }
+    .footer-social a svg { width: 18px; height: 18px; stroke: rgba(255,255,255,0.35); fill: none; transition: stroke 0.2s; }
+    .footer-social a:hover svg { stroke: rgba(255,255,255,0.8); }
+    .footer-col h4 {
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
+    .footer-col ul li a.highlight { color: var(--gold); }
+    .footer-col ul li a.highlight:hover { color: #d4ba8e; }
+    .footer-bottom {
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.5); }
+
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .service-block-inner { grid-template-columns: 1fr; gap: 40px; }
+      .service-image img { height: 360px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item.wide { grid-column: span 1; }
+      .gallery-item.tall img { height: 360px; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px; }
+      .container { padding: 0 24px; }
+      .nav-inner { grid-template-columns: auto 1fr auto; padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-right .btn { display: none; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.tall { grid-row: span 1; }
+      .gallery-item img,
+      .gallery-item.tall img,
+      .gallery-item.wide img { height: 260px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-legal { flex-wrap: wrap; justify-content: center; }
+      .nav-mobile { padding: 24px; }
+      .service-ctas { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Catch Salon & Spa">
+      <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="spa.html" class="active">Spa</a></li>
+      <li><a href="salon.html">Salon</a></li>
+      <li><a href="weight-loss.html">Weight Loss</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book Now</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-mobile" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="spa.html">Spa</a>
+    <a href="salon.html">Salon</a>
+    <a href="weight-loss.html">Weight Loss</a>
+    <a href="about.html">About Us</a>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; margin-top:8px;">Book Now</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Spa hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="section-label">The Ultimate Anti-Aging Experience</span>
+    <h1>Catch the Skin You've<br>Always Wanted.</h1>
+    <p class="hero-sub">Advanced, results-driven spa treatments that go far beyond the surface. Designed to restore, tighten, and transform your skin from the inside out.</p>
+    <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-white" style="font-size:11px; letter-spacing:0.18em;">Book Your Treatment</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     INTRO
+═══════════════════════════════════════════════════════════ -->
+<section id="intro" aria-label="About our spa">
+  <div class="container">
+    <div class="intro-inner">
+      <span class="section-label">What Makes Us Different</span>
+      <h2>This is not your average spa.</h2>
+      <div class="divider"></div>
+      <p>At Catch, every treatment is chosen with one goal in mind: real, visible results that you can see and feel. We combine luxury with advanced technology to deliver the kind of skin transformation that used to require surgery, lengthy downtime, or a waiting list. Whether you're targeting fine lines, sun damage, stubborn texture, or early signs of aging, we have the treatment and the expertise to get you there.</p>
+      <div class="intro-rule"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES HEADER
+═══════════════════════════════════════════════════════════ -->
+<section id="services-header" aria-label="Services overview">
+  <div class="container">
+    <span class="section-label">Our Spa Services</span>
+    <h2>Every treatment. One goal: your glow.</h2>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE BLOCKS
+═══════════════════════════════════════════════════════════ -->
+
+<!-- 1. SIGNATURE FACIAL -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-meta">
+        <span class="service-pill">Facial</span>
+        <h2>Signature Facial</h2>
+        <span class="service-tagline">The foundation of beautiful skin.</span>
+        <p class="service-body">More than a standard cleanse-and-moisturize, our Signature Facial is a fully customized experience using high-end products and specialized techniques tailored to your skin's unique needs. We assess, treat, and leave your skin purified, balanced, and radiantly healthy. Every single time.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">All skin types &nbsp;·&nbsp; First-time clients &nbsp;·&nbsp; Maintenance glow</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1772721015_3846185069274264869_47410037410.jpg"
+             alt="Signature facial treatment at Catch Spa"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. HYDRATION FACIAL -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1762950551_3764224511277271519_47410037410.jpg"
+             alt="Hydration facial at Catch Spa"
+             loading="lazy" />
+      </div>
+      <div class="service-meta">
+        <span class="service-pill">Facial</span>
+        <h2>Hydration Facial</h2>
+        <span class="service-tagline">Instant glow. Deep clean. Zero downtime.</span>
+        <p class="service-body">Our multi-function hydration treatment uses powerful jet stream technology to deep-clean pores, remove impurities, and flood the skin with nutrients. Circulation improves instantly and you leave with a luminous, refreshed complexion. Perfect for all skin types and a beautiful entry point into your skin journey.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Dull skin &nbsp;·&nbsp; Clogged pores &nbsp;·&nbsp; Pre-event glow</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. NON-NEEDLE MESOTHERAPY -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-meta">
+        <span class="service-pill">Advanced Treatment</span>
+        <h2>Non-Needle Mesotherapy</h2>
+        <span class="service-tagline">All the benefits. None of the needles.</span>
+        <p class="service-body">Traditional mesotherapy delivers vitamins, minerals, and rejuvenating actives directly into the skin, but it requires needles. Our non-needle version achieves the same deep skin nourishment through advanced, non-invasive technology. The result is a comfortable, zero-downtime way to restore radiance, hydrate deeply, and address skin concerns at the cellular level.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Dull or dehydrated skin &nbsp;·&nbsp; Anti-aging &nbsp;·&nbsp; Sensitive clients</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1766942979_3797715421660036263_47410037410.jpg"
+             alt="Non-needle mesotherapy at Catch Spa"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. NON-SURGICAL FACELIFT (HIFU) -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403204848_47410037410.jpg"
+             alt="HIFU non-surgical facelift at Catch Spa"
+             loading="lazy" />
+      </div>
+      <div class="service-meta">
+        <span class="service-pill">Non-Surgical Lift</span>
+        <h2>Non-Surgical Facelift <span style="font-family:var(--ff-sans); font-size:14px; font-weight:400; letter-spacing:0.04em; opacity:0.6;">(HIFU)</span></h2>
+        <span class="service-tagline">Turn back the clock. No surgery required.</span>
+        <p class="service-body">High-Intensity Focused Ultrasound (HIFU) is one of the most powerful non-invasive skin-tightening treatments available today. The ultrasound energy penetrates deep into the skin's layers, generating controlled heat that triggers collagen production, firms sagging tissue, and promotes long-lasting lift and rejuvenation. Results can often be seen immediately.</p>
+        <div class="service-quote">
+          "I was amazed with the results I saw almost immediately on my neck. I will be going back!" · Michelle D.
+        </div>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Skin laxity &nbsp;·&nbsp; Jawline + neck tightening &nbsp;·&nbsp; Deep wrinkles &nbsp;·&nbsp; Clients 35+</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. RF MICRONEEDLING -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-meta">
+        <span class="service-pill">Advanced Skin</span>
+        <h2>RF Microneedling</h2>
+        <span class="service-tagline">Collagen, rebuilt from the inside.</span>
+        <p class="service-body">Microneedling combined with Radio Frequency energy is one of our most sought-after anti-aging treatments. Tiny micro-channels in the skin's surface trigger the body's natural healing response, while RF energy heats the deeper dermal layers. Together they stimulate powerful collagen and elastin production that firms, smooths, and dramatically improves skin texture over time.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Fine lines + wrinkles &nbsp;·&nbsp; Acne scarring &nbsp;·&nbsp; Skin laxity &nbsp;·&nbsp; Enlarged pores &nbsp;·&nbsp; Texture</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1763653668_3770122682944810027_47410037410.jpg"
+             alt="RF Microneedling at Catch Spa"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. CRYOTHERAPY FACIAL -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211014_47410037410.jpg"
+             alt="Cryotherapy facial at Catch Spa"
+             loading="lazy" />
+      </div>
+      <div class="service-meta">
+        <span class="service-pill">Cryo Facial</span>
+        <h2>Cryotherapy Facial</h2>
+        <span class="service-tagline">Cool down. Lift up. Light up.</span>
+        <p class="service-body">A controlled blast of cold air delivered to the skin causes blood vessels to constrict, instantly reducing inflammation, puffiness, and redness. As the skin warms back up, circulation surges and collagen production is stimulated, leaving you with a visibly tighter, lifted, and glowing complexion. A favorite for event prep and a powerful add-on to any treatment.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Puffiness &nbsp;·&nbsp; Redness &nbsp;·&nbsp; Pre-event &nbsp;·&nbsp; Collagen boost &nbsp;·&nbsp; Glow enhancement</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. LED THERAPY FACIAL -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-meta">
+        <span class="service-pill">Light Therapy</span>
+        <h2>LED Therapy Facial</h2>
+        <span class="service-tagline">Light that heals. Skin that glows.</span>
+        <p class="service-body">LED light therapy delivers precise wavelengths of energy deep into the skin to stimulate collagen repair, smooth fine lines, and address multiple skin concerns simultaneously. Red light rebuilds and firms; blue light targets acne-causing bacteria for clearer, healthier skin. Non-invasive, completely comfortable, and deeply effective.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Fine lines &nbsp;·&nbsp; Active acne &nbsp;·&nbsp; Post-treatment recovery &nbsp;·&nbsp; Overall skin health</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+      </div>
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202403211972_47410037410.jpg"
+             alt="LED therapy facial at Catch Spa"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. IPL PHOTOFACIAL -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202428358297_47410037410.jpg"
+             alt="IPL photofacial at Catch Spa"
+             loading="lazy" />
+      </div>
+      <div class="service-meta">
+        <span class="service-pill">IPL</span>
+        <h2>IPL Photofacial <span style="font-family:var(--ff-sans); font-size:14px; font-weight:400; letter-spacing:0.04em; opacity:0.6;">(Intense Pulsed Light)</span></h2>
+        <span class="service-tagline">Fade spots. Even your tone. Reveal clarity.</span>
+        <p class="service-body">IPL photorejuvenation uses precise pulses of light to penetrate deep into the skin and target pigmentation, sun damage, broken capillaries, and acne scars without affecting the surrounding skin. The result is a visibly clearer, more even, and more luminous complexion with minimal downtime.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Dark spots &nbsp;·&nbsp; Sun damage &nbsp;·&nbsp; Rosacea &nbsp;·&nbsp; Uneven skin tone &nbsp;·&nbsp; Acne scarring</span>
+        </div>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. BODY CONTOURING — SCULPTOR -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-meta">
+        <span class="service-pill">Body Contouring</span>
+        <h2>Body Contouring: Sculptor</h2>
+        <span class="service-tagline">Tighten. Smooth. Contour.</span>
+        <p class="service-body">Our Sculptor combines vacuum therapy, radio frequency, and infrared technology to shrink fat cells, smooth the appearance of cellulite, and dramatically improve skin texture and tone. The result? A visibly more sculpted, firm, and contoured body. No surgery, no needles, no downtime.</p>
+        <p class="service-body" style="font-size:13px; color:#7a7a7a; font-style:italic;">Full body contouring options (Cryo T-Shock, Liposonix, and EMS) are available on our Weight Loss page.</p>
+        <div class="best-for">
+          <span class="best-for-label">Best for</span>
+          <span class="best-for-text">Cellulite &nbsp;·&nbsp; Loose skin &nbsp;·&nbsp; Post-weight loss &nbsp;·&nbsp; Postpartum laxity &nbsp;·&nbsp; Body contouring</span>
+        </div>
+        <div class="service-ctas">
+          <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-dark">Book This Treatment</a>
+          <a href="weight-loss.html" class="link-arrow">
+            See All Body Treatments
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202470295740_47410037410.jpg"
+             alt="Sculptor body contouring at Catch Spa"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10. HAIR REMOVAL -->
+<div class="service-block">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-image">
+        <img src="brand_assets/photos/catch.nash_1765115116_3782382202629670230_47410037410.jpg"
+             alt="Hair removal services at Catch Spa"
+             loading="lazy" />
+      </div>
+      <div class="service-meta">
+        <span class="service-pill">Hair Removal</span>
+        <h2>Hair Removal</h2>
+        <span class="service-tagline">Smooth, lasting, effortless.</span>
+        <p class="service-body">We offer dermaplaning and facial waxing for smooth, refined skin texture, plus laser hair removal for long-term, permanent reduction of unwanted hair. Laser hair removal uses targeted light energy absorbed by the hair follicle to inhibit future growth, delivering lasting results with minimal discomfort.</p>
+        <ul class="services-list">
+          <li>Dermaplaning</li>
+          <li>Facial Waxing</li>
+          <li>Laser Hair Removal</li>
+        </ul>
+        <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn">Book This Treatment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIAL CALLOUT
+═══════════════════════════════════════════════════════════ -->
+<section id="testimonial-callout" aria-label="Client testimonial">
+  <div class="container">
+    <div class="callout-inner">
+      <div class="callout-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <span class="callout-open-quote">&ldquo;</span>
+      <p class="callout-quote">I was amazed with the results I saw almost immediately on my neck. The experience was wonderful, the esthetician was great to work with, and the room was beautiful. I will be going back.</p>
+      <span class="callout-attr">Michelle D. &nbsp;·&nbsp; Google Review</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PHOTO GALLERY
+═══════════════════════════════════════════════════════════ -->
+<section id="gallery" aria-label="Catch Spa photo gallery">
+  <div class="container">
+    <div class="gallery-header">
+      <span class="section-label">Inside Catch</span>
+      <h2>A space designed for your transformation.</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item tall">
+        <img src="brand_assets/photos/catch.nash_1733579054_3517838533814954555_47410037410.jpg"
+             alt="Catch Spa interior" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="brand_assets/photos/catch.nash_1733579054_3517838533823319008_47410037410.jpg"
+             alt="Catch treatment room" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="brand_assets/photos/catch.nash_1733579054_3517838533831690591_47410037410.jpg"
+             alt="Catch spa equipment" loading="lazy" />
+      </div>
+      <div class="gallery-item wide">
+        <img src="brand_assets/photos/catch.nash_1772547918_3844733027720639050_47410037410.jpg"
+             alt="Catch Spa treatment in progress" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="brand_assets/photos/catch.nash_1733579054_3517838533882094868_47410037410.jpg"
+             alt="Catch Spa atmosphere" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="brand_assets/photos/catch.nash_1733579054_3517838533890438598_47410037410.jpg"
+             alt="Catch Spa results" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="brand_assets/photos/catch.nash_1733579054_3517838533898849148_47410037410.jpg"
+             alt="Catch Salon & Spa" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CLOSING CTA
+═══════════════════════════════════════════════════════════ -->
+<section id="closing-cta" aria-label="Book your spa experience">
+  <div class="closing-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="closing-inner">
+      <span class="section-label">Your Skin's Next Chapter</span>
+      <h2>Your skin's best chapter is waiting.</h2>
+      <p>Whether you're brand new to aesthetic treatments or ready to take the next step in your anti-aging journey, we're here to guide you. Zero pressure, and a plan built entirely around you.</p>
+      <a href="https://www.vagaro.com/catch" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:11px; letter-spacing:0.18em;">Book Your Experience</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="brand_assets/catch salo.png" alt="Catch Salon & Spa" />
+        </div>
+        <p class="footer-tagline">The Ultimate Anti-Aging Experience</p>
+        <p class="footer-location">Spring Hill, TN · Nashville Area</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/catch.nash" target="_blank" rel="noopener" aria-label="Instagram @catch.nash">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.35)"/></svg>
+          </a>
+          <a href="https://www.facebook.com/catch.nash" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Spa &amp; Skin</h4>
+        <ul>
+          <li><a href="spa.html">Signature Facial</a></li>
+          <li><a href="spa.html">Hydration Facial</a></li>
+          <li><a href="spa.html">RF Microneedling</a></li>
+          <li><a href="spa.html">HIFU Facelift</a></li>
+          <li><a href="spa.html">IPL Photofacial</a></li>
+          <li><a href="spa.html">LED Therapy</a></li>
+          <li><a href="spa.html" class="highlight">All Spa Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Body Contouring</h4>
+        <ul>
+          <li><a href="weight-loss.html">Cryo T-Shock</a></li>
+          <li><a href="weight-loss.html">Sculptor (RF)</a></li>
+          <li><a href="weight-loss.html">Liposonix</a></li>
+          <li><a href="weight-loss.html">EMS</a></li>
+          <li><a href="weight-loss.html">Combination Packages</a></li>
+          <li><a href="weight-loss.html" class="highlight">$99 RF Special</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Salon</h4>
+        <ul>
+          <li><a href="salon.html">Haircuts</a></li>
+          <li><a href="salon.html">Color &amp; Balayage</a></li>
+          <li><a href="salon.html">Blowouts &amp; Styling</a></li>
+          <li><a href="salon.html" class="highlight">All Salon Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Book an Appointment</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Memberships</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Payment Plans</a></li>
+          <li><a href="https://www.vagaro.com/catch" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Catch Salon and Spa · Spring Hill, TN · All Rights Reserved</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cancellation Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════════ -->
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Hero zoom on load
+  window.addEventListener('load', () => {
+    document.getElementById('hero').classList.add('loaded');
+  });
+
+  // Mobile nav toggle
+  function toggleMenu(btn) {
+    const mobile = document.getElementById('mobileNav');
+    const isOpen = mobile.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    const spans = btn.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  }
+
+  document.querySelectorAll('.nav-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+      const btn = document.querySelector('.nav-hamburger');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.service-block, .gallery-item, .callout-inner, .intro-inner');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+
+  fadeEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = `opacity 0.6s ease ${(i % 4) * 0.08}s, transform 0.6s ease ${(i % 4) * 0.08}s`;
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
